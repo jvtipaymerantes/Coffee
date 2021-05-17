@@ -11,6 +11,8 @@ namespace coposProject
 {
     public partial class purchaseForm : Form
     {
+        public static string productName;
+
         public purchaseForm()
         {
             InitializeComponent();
@@ -152,8 +154,11 @@ namespace coposProject
 
         private void label16_Click(object sender, EventArgs e)
         {
-            userControl.purchaseOrderUc a = new userControl.purchaseOrderUc();
-            flowLayoutPanel1.Controls.Add(a);
+
+            productName = textBox1.Text;
+            userControl.purchaseOrderUc uc = new userControl.purchaseOrderUc();
+            flowLayoutPanel1.Controls.Add(uc);
+
 
         }
 
@@ -162,15 +167,16 @@ namespace coposProject
 
             String imagelocation = "";
             try {
+                
                 OpenFileDialog dialog = new OpenFileDialog();
-                dialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All Files(*.*)|*.*|";
-                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
+                dialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All Files(*.*)|*.*";
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK){
                     imagelocation = dialog.FileName;
                     pictureBox19.ImageLocation = imagelocation;
+                    panel32.Visible = false;
                 }
 
-            }catch(Exception){
+            } catch(Exception){
                 MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
