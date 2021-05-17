@@ -499,6 +499,7 @@
             this.label16.Size = new System.Drawing.Size(130, 14);
             this.label16.TabIndex = 7;
             this.label16.Text = "REGISTER ACCOUNT";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // pictureBox1
             // 
@@ -514,9 +515,9 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(52, 123);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(52, 120);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1092, 480);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1101, 483);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // shapeContainer1
@@ -537,7 +538,7 @@
             this.rectangleShape6.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.rectangleShape6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(54)))), ((int)(((byte)(40)))));
             this.rectangleShape6.BorderWidth = 2;
-            this.rectangleShape6.CornerRadius = 8;
+            this.rectangleShape6.CornerRadius = 17;
             this.rectangleShape6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rectangleShape6.Location = new System.Drawing.Point(966, 57);
             this.rectangleShape6.Name = "rectangleShape6";
