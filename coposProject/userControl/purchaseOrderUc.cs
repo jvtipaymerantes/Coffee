@@ -14,11 +14,14 @@ namespace coposProject.userControl
         public purchaseOrderUc()
         {
             InitializeComponent();
+
         }
 
         private void purchaseOrderUc_Load(object sender, EventArgs e)
         {
-
+            textBox1.Text = purchaseForm.productName;
         }
+
+
     }
 }
