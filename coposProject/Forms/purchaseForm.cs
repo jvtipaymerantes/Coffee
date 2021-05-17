@@ -160,6 +160,36 @@ namespace coposProject
         private void pictureBox19_Click(object sender, EventArgs e)
         {
 
+            String imagelocation = "";
+            try {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All Files(*.*)|*.*|";
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    imagelocation = dialog.FileName;
+                    pictureBox19.ImageLocation = imagelocation;
+                }
+
+            }catch(Exception){
+                MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void pictureBox19_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox19.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
+            pictureBox17.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
+            label18.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
+            panel32.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
+        }
+
+        private void pictureBox19_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox19.BackColor = Color.White;
+            pictureBox17.BackColor = Color.White;
+            label18.BackColor = Color.White;
+            panel32.BackColor = Color.White;
         }
 
         

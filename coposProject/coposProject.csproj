@@ -122,10 +122,10 @@
     <Compile Include="Forms\purchaseForm.Designer.cs">
       <DependentUpon>purchaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\purchaseOrderUc.cs">
+    <Compile Include="userControl\purchaseOrderUc.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\purchaseOrderUc.Designer.cs">
+    <Compile Include="userControl\purchaseOrderUc.Designer.cs">
       <DependentUpon>purchaseOrderUc.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\accounts.resx">
@@ -165,7 +165,7 @@
     <EmbeddedResource Include="Forms\purchaseForm.resx">
       <DependentUpon>purchaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\purchaseOrderUc.resx">
+    <EmbeddedResource Include="userControl\purchaseOrderUc.resx">
       <DependentUpon>purchaseOrderUc.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -218,9 +218,7 @@
   <ItemGroup>
     <None Include="Resources\icons8_visible_100px.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="userControl\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
