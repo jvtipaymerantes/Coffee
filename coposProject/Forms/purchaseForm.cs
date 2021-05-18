@@ -263,6 +263,12 @@ namespace coposProject
 
         }
 
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+            purchasePaymentForm a = new purchasePaymentForm();
+            a.Show();
+        }
+
 
 
 
