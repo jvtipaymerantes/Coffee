@@ -28,7 +28,8 @@ namespace coposProject
                 con.Close();
             }catch(Exception ex){
                 MessageBox.Show("Connection Error!" + ex);
-            }
+            }// End of try catch
+
         }
     }
 }
