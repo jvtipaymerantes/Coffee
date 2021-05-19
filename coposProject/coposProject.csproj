@@ -128,10 +128,10 @@
     <Compile Include="Forms\registerForm.Designer.cs">
       <DependentUpon>registerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="purchasePaymentForm.cs">
+    <Compile Include="Forms\purchasePaymentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="purchasePaymentForm.Designer.cs">
+    <Compile Include="Forms\purchasePaymentForm.Designer.cs">
       <DependentUpon>purchasePaymentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="userControl\purchaseOrderUc.cs">
@@ -180,7 +180,7 @@
     <EmbeddedResource Include="Forms\registerForm.resx">
       <DependentUpon>registerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="purchasePaymentForm.resx">
+    <EmbeddedResource Include="Forms\purchasePaymentForm.resx">
       <DependentUpon>purchasePaymentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userControl\purchaseOrderUc.resx">
