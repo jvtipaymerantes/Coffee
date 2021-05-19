@@ -11,6 +11,15 @@ namespace coposProject
 {
     public partial class purchaseForm : Form
     {
+        public static string productCode;
+        public static string productName;
+        public static string productDescription;
+        public static string productType;
+        public static string productUnit;
+        public static string productQuantity;
+        public static string productCostperItem;
+        public static string productExpDate;
+
         public purchaseForm()
         {
             InitializeComponent();
@@ -24,6 +33,7 @@ namespace coposProject
             rectangleShape10.Visible = false;
             rectangleShape12.Visible = false;
             rectangleShape25.Visible = false;
+            productType = "Coffee Bean";
         }
 
         private void rectangleShape5_Click(object sender, EventArgs e)
@@ -34,6 +44,7 @@ namespace coposProject
             rectangleShape10.Visible = false;
             rectangleShape12.Visible = false;
             rectangleShape25.Visible = false;
+            productType = "Milk";
         }
 
         private void rectangleShape7_Click(object sender, EventArgs e)
@@ -44,6 +55,7 @@ namespace coposProject
             rectangleShape10.Visible = false;
             rectangleShape12.Visible = false;
             rectangleShape25.Visible = false;
+            productType = "Sugar";
         }
 
         private void rectangleShape9_Click(object sender, EventArgs e)
@@ -54,6 +66,7 @@ namespace coposProject
             rectangleShape10.Visible = true;
             rectangleShape12.Visible = false;
             rectangleShape25.Visible = false;
+            productType = "Tea";
         }
 
         private void rectangleShape11_Click(object sender, EventArgs e)
@@ -64,6 +77,18 @@ namespace coposProject
             rectangleShape10.Visible = false;
             rectangleShape12.Visible = true;
             rectangleShape25.Visible = false;
+            productType = "Syrup";
+        }
+
+        private void rectangleShape24_Click(object sender, EventArgs e)
+        {
+            rectangleShape4.Visible = false;
+            rectangleShape6.Visible = false;
+            rectangleShape8.Visible = false;
+            rectangleShape10.Visible = false;
+            rectangleShape12.Visible = false;
+            rectangleShape25.Visible = true;
+            productType = "Others";
         }
 
         private void comboBox1_DropDownClosed(object sender, EventArgs e)
@@ -152,17 +177,97 @@ namespace coposProject
 
         private void label16_Click(object sender, EventArgs e)
         {
-            userControl.purchaseOrderUc a = new userControl.purchaseOrderUc();
-            flowLayoutPanel1.Controls.Add(a);
+
+            productName = textBox1.Text;
+            productCode = textBox6.Text;
+            productDescription = textBox2.Text;
+
+            StringBuilder unit = new StringBuilder();
+            unit.Append(textBox3.Text);
+            unit.Append(comboBox1.Text);
+            productUnit = unit.ToString();
+
+            productQuantity = textBox4.Text;
+            productCostperItem = textBox5.Text;
+
+            StringBuilder expDate = new StringBuilder();
+            expDate.Append(comboBox2.Text + " ");
+            expDate.Append(comboBox3.Text + " ");
+            expDate.Append(comboBox4.Text);
+            productExpDate = expDate.ToString();
+
+
+            userControl.purchaseOrderUc uc = new userControl.purchaseOrderUc();
+            flowLayoutPanel1.Controls.Add(uc);
+
+            clearPurchaseForm();
 
         }
 
         private void pictureBox19_Click(object sender, EventArgs e)
         {
 
+            String imagelocation = "";
+            try {
+                
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All Files(*.*)|*.*";
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK){
+                    imagelocation = dialog.FileName;
+                    pictureBox19.ImageLocation = imagelocation;
+                    panel32.Visible = false;
+                }
+
+            } catch(Exception){
+                MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+
         }
 
-        
+        private void pictureBox19_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox19.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
+            pictureBox17.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
+            label18.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
+            panel32.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
+        }
+
+        private void pictureBox19_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox19.BackColor = Color.White;
+            pictureBox17.BackColor = Color.White;
+            label18.BackColor = Color.White;
+            panel32.BackColor = Color.White;
+        }
+
+        public void clearPurchaseForm()
+        {
+            textBox1.Clear();
+            textBox6.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            comboBox1.Text = "UNIT";
+            textBox4.Clear();
+            textBox5.Clear();
+            comboBox2.Text = "MONTH";
+            comboBox3.Text = "DAY";
+            comboBox4.Text = "YEAR";
+
+            productType = "";
+            rectangleShape4.Visible = false;
+            rectangleShape6.Visible = false;
+            rectangleShape8.Visible = false;
+            rectangleShape10.Visible = false;
+            rectangleShape12.Visible = false;
+            rectangleShape25.Visible = false;
+
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+            purchasePaymentForm a = new purchasePaymentForm();
+            a.Show();
+        }
 
 
 
