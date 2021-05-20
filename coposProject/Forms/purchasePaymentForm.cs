@@ -15,6 +15,7 @@ namespace coposProject
     {
         public static float change;
         private OleDbConnection con = new OleDbConnection();
+        public static purchaseForm a = null;
 
         public purchasePaymentForm()
         {
@@ -64,23 +65,19 @@ namespace coposProject
 
         private void label3_Click(object sender, EventArgs e)
         {
-
-            purchaseForm a = new purchaseForm();
-            userControl.purchaseOrderUc uc = new userControl.purchaseOrderUc();
-
-                con.Open();
-                //OleDbCommand command = new OleDbCommand();
-                //command.Connection = con;
-                //MessageBox.Show("Phase 1");
-                a.insertData();
-                //foreach(Control c in a.flowLayoutPanel1.Controls){
-                //MessageBox.Show(uc.TextBox1Value + " " + uc.TextBox2Value + " " + uc.TextBox3Value + " " + uc.TextBox4Value + " " + uc.TextBox5Value + " " + uc.TextBox6Value + " " + uc.TextBox7Value);
-                    
-                    //command.CommandText = " INSERT INTO tblPurchaseReceipt(referenceNo, productCode, productName, productDescription, productCostPerItem, productQty, total, cashAmount, change) values('" + textBox1.Text + "', '" + uc.TextBox1Value.ToString() + "', '" + uc.TextBox2Value.ToString() + "', '" + uc.TextBox3Value.ToString() + "', '" + uc.TextBox6Value.ToString() + "', '" + uc.TextBox8Value.ToString() + "', '" + textBox4.Text + "', '" + textBox2.Text + "', '" + textBox6.Text + "') ";
-                    //command.ExecuteNonQuery();
-                //}
-
+            
+            con.Open();
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = con;
+            MessageBox.Show("Phase 1");
+                
+            foreach (userControl.purchaseOrderUc uc in a.flowLayoutPanel1.Controls)
+            {
+                MessageBox.Show(uc.TextBox1Value + " " + uc.TextBox2Value + " " + uc.TextBox3Value + " " + uc.TextBox4Value + " " + uc.TextBox5Value + " " + uc.TextBox6Value + " " + uc.TextBox7Value);
+                command.CommandText = " INSERT INTO tblPurchaseReceipt(referenceNo, productCode, productName, productDescription, productCostPerItem, productQty, total, cashAmount, change) values('" + textBox1.Text + "', '" + uc.TextBox1Value.ToString() + "', '" + uc.TextBox2Value.ToString() + "', '" + uc.TextBox3Value.ToString() + "', '" + uc.TextBox6Value.ToString() + "', '" + uc.TextBox8Value.ToString() + "', '" + textBox4.Text + "', '" + textBox2.Text + "', '" + textBox6.Text + "') ";
+                command.ExecuteNonQuery();
                 MessageBox.Show("Data Saved!");
+            }
 
             con.Close();
             this.Close();

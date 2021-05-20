@@ -297,6 +297,7 @@ namespace coposProject
         private void pictureBox15_Click(object sender, EventArgs e)
         {
 
+            //Message Box that shows value of textbox in uc
             foreach(userControl.purchaseOrderUc uc in flowLayoutPanel1.Controls){
                 MessageBox.Show(uc.TextBox1Value + " " + uc.TextBox2Value + " " + uc.TextBox3Value + " " + uc.TextBox4Value + " " + uc.TextBox5Value + " " + uc.TextBox6Value + " " + uc.TextBox7Value);
             }
@@ -311,6 +312,7 @@ namespace coposProject
         private void label30_Click(object sender, EventArgs e)
         {
             purchasePaymentForm a = new purchasePaymentForm();
+            purchasePaymentForm.a = this;
             a.Show();
         }
 
