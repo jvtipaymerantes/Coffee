@@ -86,12 +86,6 @@ namespace coposProject.userControl
 
         }
 
-        private void purchaseOrderUc_MouseEnter(object sender, EventArgs e)
-        {
-            pictureBox1.Visible = true;
-            pictureBox2.Visible = true;
-        }
-
         private void purchaseOrderUc_MouseLeave(object sender, EventArgs e)
         {
             pictureBox1.Visible = false;
@@ -115,6 +109,12 @@ namespace coposProject.userControl
             //purchaseForm.flowLayoutPanel1.Controls.Remove(foundControl);
             //purchaseForm a = new purchaseForm();
             this.Parent.Controls.Remove(this);
+        }
+
+        private void purchaseOrderUc_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox1.Visible = true;
+            pictureBox2.Visible = true;
         }
 
         
