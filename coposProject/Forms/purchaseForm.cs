@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace coposProject
 {
@@ -19,10 +20,21 @@ namespace coposProject
         public static string productQuantity;
         public static string productCostperItem;
         public static string productExpDate;
+        public static float productTotal;
+        public static float overallTotal = 0;
 
+        public static purchaseForm currentForm = null;
+
+        private OleDbConnection con = new OleDbConnection();
         public purchaseForm()
         {
             InitializeComponent();
+            con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=coposDb.accdb";
+        }
+
+        private void purchaseForm_Load(object sender, EventArgs e)
+        {
+            textBox7.Text = overallTotal.ToString();
         }
 
         private void rectangleShape2_Click(object sender, EventArgs e)
@@ -34,6 +46,9 @@ namespace coposProject
             rectangleShape12.Visible = false;
             rectangleShape25.Visible = false;
             productType = "Coffee Bean";
+
+            textBox6.Text = "COF";
+
         }
 
         private void rectangleShape5_Click(object sender, EventArgs e)
@@ -45,6 +60,8 @@ namespace coposProject
             rectangleShape12.Visible = false;
             rectangleShape25.Visible = false;
             productType = "Milk";
+
+            textBox6.Text = "MLK";
         }
 
         private void rectangleShape7_Click(object sender, EventArgs e)
@@ -56,6 +73,9 @@ namespace coposProject
             rectangleShape12.Visible = false;
             rectangleShape25.Visible = false;
             productType = "Sugar";
+
+            textBox6.Text = "SGR";
+
         }
 
         private void rectangleShape9_Click(object sender, EventArgs e)
@@ -67,6 +87,9 @@ namespace coposProject
             rectangleShape12.Visible = false;
             rectangleShape25.Visible = false;
             productType = "Tea";
+
+            textBox6.Text = "TEA";
+
         }
 
         private void rectangleShape11_Click(object sender, EventArgs e)
@@ -78,6 +101,9 @@ namespace coposProject
             rectangleShape12.Visible = true;
             rectangleShape25.Visible = false;
             productType = "Syrup";
+
+            textBox6.Text = "SYR";
+
         }
 
         private void rectangleShape24_Click(object sender, EventArgs e)
@@ -89,6 +115,9 @@ namespace coposProject
             rectangleShape12.Visible = false;
             rectangleShape25.Visible = true;
             productType = "Others";
+
+            textBox6.Text = "OTH";
+
         }
 
         private void comboBox1_DropDownClosed(object sender, EventArgs e)
@@ -196,6 +225,10 @@ namespace coposProject
             expDate.Append(comboBox4.Text);
             productExpDate = expDate.ToString();
 
+            productTotal = float.Parse(productQuantity) * float.Parse(productCostperItem);
+            
+            overallTotal = overallTotal + productTotal;
+            textBox7.Text = overallTotal.ToString();
 
             userControl.purchaseOrderUc uc = new userControl.purchaseOrderUc();
             flowLayoutPanel1.Controls.Add(uc);
@@ -265,11 +298,44 @@ namespace coposProject
 
         private void pictureBox15_Click(object sender, EventArgs e)
         {
+            currentForm = this;
             purchasePaymentForm a = new purchasePaymentForm();
             a.Show();
         }
 
+        private void label30_Click(object sender, EventArgs e)
+        {
+            currentForm = this;
+            purchasePaymentForm a = new purchasePaymentForm();
+            a.Show();
+        }
 
+        public string LabelText
+        {
+            get
+            {
+                return this.label1.Text;
+            }
+            set
+            {
+                this.label1.Text = value;
+            }
+        }
+
+        public void insertData(){
+
+            foreach (userControl.purchaseOrderUc uc in flowLayoutPanel1.Controls)
+            {
+                MessageBox.Show(uc.TextBox1Value + " " + uc.TextBox2Value + " " + uc.TextBox3Value + " " + uc.TextBox4Value + " " + uc.TextBox5Value + " " + uc.TextBox6Value + " " + uc.TextBox7Value);
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = con;
+                command.CommandText = " INSERT INTO tblPurchaseReceipt(referenceNo, productCode, productName, productDescription, productCostPerItem, productQty, total, cashAmount, change) values('" + textBox1.Text + "', '" + uc.TextBox1Value.ToString() + "', '" + uc.TextBox2Value.ToString() + "', '" + uc.TextBox3Value.ToString() + "', '" + uc.TextBox6Value.ToString() + "', '" + uc.TextBox8Value.ToString() + "', '" + textBox4.Text + "', '" + textBox2.Text + "', '" + textBox6.Text + "') ";
+                command.ExecuteNonQuery();
+
+            }
+
+            
+        }
 
 
     }
