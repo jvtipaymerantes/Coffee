@@ -263,6 +263,8 @@ namespace coposProject
             pictureBox17.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
             label18.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
             panel32.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
+            rectangleShape27.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
+            rectangleShape27.BorderColor = System.Drawing.Color.FromArgb(240, 240, 240);
         }
 
         private void pictureBox19_MouseLeave(object sender, EventArgs e)
@@ -271,6 +273,8 @@ namespace coposProject
             pictureBox17.BackColor = Color.White;
             label18.BackColor = Color.White;
             panel32.BackColor = Color.White;
+            rectangleShape27.BackColor = Color.White;
+            rectangleShape27.BorderColor = Color.White;
         }
 
         public void clearPurchaseForm()
@@ -293,6 +297,10 @@ namespace coposProject
             rectangleShape10.Visible = false;
             rectangleShape12.Visible = false;
             rectangleShape25.Visible = false;
+
+            label16.Visible = false;
+            pictureBox16.Visible = false;
+            rectangleShape23.Visible = false;
 
         }
 
@@ -323,20 +331,126 @@ namespace coposProject
         }
 
         public void insertData(){
-
-            foreach (userControl.purchaseOrderUc uc in flowLayoutPanel1.Controls)
+            if (!(textBox6.Text.Equals("")) && !(textBox1.Text.Equals("")) && !(textBox2.Text.Equals("")) && !(textBox3.Text.Equals("")) && !(comboBox1.Text.Equals("UNIT")) && !(textBox5.Text.Equals("")) && !(comboBox2.Text.Equals("MONTH")) && !(comboBox3.Text.Equals("DAY")) && !(comboBox4.Text.Equals("YEAR")) && !(textBox4.Text.Equals("")))
             {
-                MessageBox.Show(uc.TextBox1Value + " " + uc.TextBox2Value + " " + uc.TextBox3Value + " " + uc.TextBox4Value + " " + uc.TextBox5Value + " " + uc.TextBox6Value + " " + uc.TextBox7Value);
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = con;
-                command.CommandText = " INSERT INTO tblPurchaseReceipt(referenceNo, productCode, productName, productDescription, productCostPerItem, productQty, total, cashAmount, change) values('" + textBox1.Text + "', '" + uc.TextBox1Value.ToString() + "', '" + uc.TextBox2Value.ToString() + "', '" + uc.TextBox3Value.ToString() + "', '" + uc.TextBox6Value.ToString() + "', '" + uc.TextBox8Value.ToString() + "', '" + textBox4.Text + "', '" + textBox2.Text + "', '" + textBox6.Text + "') ";
-                command.ExecuteNonQuery();
-
+                label16.Visible = true;
+                pictureBox16.Visible = true;
+                rectangleShape23.Visible = true;
             }
+        }
 
-            
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+            insertData();
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            insertData();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            insertData();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            insertData();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            insertData();
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            insertData();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            insertData();
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            insertData();
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            insertData();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            insertData();
+        }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+            productName = textBox1.Text;
+            productCode = textBox6.Text;
+            productDescription = textBox2.Text;
+
+            StringBuilder unit = new StringBuilder();
+            unit.Append(textBox3.Text);
+            unit.Append(comboBox1.Text);
+            productUnit = unit.ToString();
+
+            productQuantity = textBox4.Text;
+            productCostperItem = textBox5.Text;
+
+            StringBuilder expDate = new StringBuilder();
+            expDate.Append(comboBox2.Text + " ");
+            expDate.Append(comboBox3.Text + " ");
+            expDate.Append(comboBox4.Text);
+            productExpDate = expDate.ToString();
+
+            productTotal = float.Parse(productQuantity) * float.Parse(productCostperItem);
+
+            overallTotal = overallTotal + productTotal;
+            textBox7.Text = overallTotal.ToString();
+
+            userControl.purchaseOrderUc uc = new userControl.purchaseOrderUc();
+            flowLayoutPanel1.Controls.Add(uc);
+
+            clearPurchaseForm();
+        }
+
+        private void rectangleShape23_Click(object sender, EventArgs e)
+        {
+            productName = textBox1.Text;
+            productCode = textBox6.Text;
+            productDescription = textBox2.Text;
+
+            StringBuilder unit = new StringBuilder();
+            unit.Append(textBox3.Text);
+            unit.Append(comboBox1.Text);
+            productUnit = unit.ToString();
+
+            productQuantity = textBox4.Text;
+            productCostperItem = textBox5.Text;
+
+            StringBuilder expDate = new StringBuilder();
+            expDate.Append(comboBox2.Text + " ");
+            expDate.Append(comboBox3.Text + " ");
+            expDate.Append(comboBox4.Text);
+            productExpDate = expDate.ToString();
+
+            productTotal = float.Parse(productQuantity) * float.Parse(productCostperItem);
+
+            overallTotal = overallTotal + productTotal;
+            textBox7.Text = overallTotal.ToString();
+
+            userControl.purchaseOrderUc uc = new userControl.purchaseOrderUc();
+            flowLayoutPanel1.Controls.Add(uc);
+
+            clearPurchaseForm();
         }
 
 
-    }
-}
+    }// End of Class
+}// End of Namespace

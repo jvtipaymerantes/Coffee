@@ -62,7 +62,7 @@
             this.rectangleShape1.BackColor = System.Drawing.Color.White;
             this.rectangleShape1.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.rectangleShape1.BorderColor = System.Drawing.Color.White;
-            this.rectangleShape1.CornerRadius = 6;
+            this.rectangleShape1.CornerRadius = 5;
             this.rectangleShape1.Location = new System.Drawing.Point(4, 2);
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(1117, 36);
@@ -220,12 +220,12 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.shapeContainer1);
-            this.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            this.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.Name = "purchaseOrderUc";
             this.Size = new System.Drawing.Size(1127, 44);
             this.Load += new System.EventHandler(this.purchaseOrderUc_Load);
-            this.MouseEnter += new System.EventHandler(this.purchaseOrderUc_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.purchaseOrderUc_MouseLeave);
+            this.MouseHover += new System.EventHandler(this.purchaseOrderUc_MouseHover);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
