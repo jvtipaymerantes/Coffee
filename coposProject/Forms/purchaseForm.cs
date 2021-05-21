@@ -23,6 +23,8 @@ namespace coposProject
         public static float productTotal;
         public static float overallTotal = 0;
 
+        public static purchaseForm currentForm = null;
+
         private OleDbConnection con = new OleDbConnection();
         public purchaseForm()
         {
@@ -296,23 +298,15 @@ namespace coposProject
 
         private void pictureBox15_Click(object sender, EventArgs e)
         {
-
-            //Message Box that shows value of textbox in uc
-            foreach(userControl.purchaseOrderUc uc in flowLayoutPanel1.Controls){
-                MessageBox.Show(uc.TextBox1Value + " " + uc.TextBox2Value + " " + uc.TextBox3Value + " " + uc.TextBox4Value + " " + uc.TextBox5Value + " " + uc.TextBox6Value + " " + uc.TextBox7Value);
-            }
-
+            currentForm = this;
             purchasePaymentForm a = new purchasePaymentForm();
             a.Show();
-
-
-
         }
 
         private void label30_Click(object sender, EventArgs e)
         {
+            currentForm = this;
             purchasePaymentForm a = new purchasePaymentForm();
-            purchasePaymentForm.a = this;
             a.Show();
         }
 
