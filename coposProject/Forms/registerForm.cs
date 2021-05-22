@@ -31,11 +31,16 @@ namespace coposProject
             OleDbCommand cmd = con.CreateCommand();
             con.Open();
             //cmd.CommandText = "Insert into registration(employeeID,employee_name,position,username,password,question1,question2) Values('" + txtboxid.Text + "', '" + txtboxname.Text + "', '" + cboxposition.Text + "', '" + txtboxusern.Text + "', '" + txtboxpass.Text + "', '"  + txtboxquest1.Text + "', '" + txtboxquest2.Text + "') ";
-            cmd.CommandText = " INSERT INTO registration(employeeID, employee_name, positionn, usernamee, passwordd, question1, question2) values('" + txtboxid.Text + "' , '" + txtboxname.Text + "', '" + cboxposition.Text.ToString() + "','" + txtboxusern.Text + "','" + txtboxpass.Text + "', '" + txtboxquest1.Text + "', '" + txtboxquest2.Text + "') "; 
+            cmd.CommandText = " INSERT INTO registration(employeeID, employeeName, employeePosition, employeeUsername, employeePassword, question1, question2) values('" + txtboxid.Text + "' , '" + txtboxname.Text + "', '" + cboxposition.Text.ToString() + "','" + txtboxusern.Text + "','" + txtboxpass.Text + "', '" + txtboxquest1.Text + "', '" + txtboxquest2.Text + "') "; 
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             MessageBox.Show("Record Submitted", "Congrats");
             con.Close();
+        }
+
+        private void rectangleShape1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

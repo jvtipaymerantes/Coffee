@@ -45,7 +45,10 @@ namespace coposProject
 
         private void label16_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            var a = new registerForm();
+            a.Closed += (s, args) => this.Close();
+            a.Show();
         }
 
 

@@ -298,6 +298,7 @@
             this.rectangleShape1.Location = new System.Drawing.Point(736, 397);
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(106, 30);
+            this.rectangleShape1.Click += new System.EventHandler(this.rectangleShape1_Click);
             // 
             // panel3
             // 
