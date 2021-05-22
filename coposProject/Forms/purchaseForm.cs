@@ -24,6 +24,7 @@ namespace coposProject
         public static float overallTotal = 0;
 
         public static purchaseForm currentForm = null;
+        
 
         private OleDbConnection con = new OleDbConnection();
         public purchaseForm()
@@ -314,8 +315,15 @@ namespace coposProject
         private void label30_Click(object sender, EventArgs e)
         {
             currentForm = this;
+
             purchasePaymentForm a = new purchasePaymentForm();
             a.Show();
+            a.TopMost = true;
+
+            shadowBg bg = new shadowBg();
+            bg.Show();
+
+
         }
 
         public string LabelText
