@@ -22,7 +22,7 @@ namespace coposProject
 
         private void registerForm_Load(object sender, EventArgs e)
         {
-           
+            timer1.Start();
 
         }
 
@@ -36,6 +36,12 @@ namespace coposProject
             cmd.ExecuteNonQuery();
             MessageBox.Show("Record Submitted", "Congrats");
             con.Close();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label12.Text = DateTime.Now.ToLongTimeString();
+            label9.Text = DateTime.Now.ToLongDateString(); 
         }
     }
 }

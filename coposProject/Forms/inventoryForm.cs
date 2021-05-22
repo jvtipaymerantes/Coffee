@@ -106,6 +106,8 @@ namespace coposProject
             ucInventory uc = new ucInventory();
             flowLayoutPanel1.Controls.Add(uc);
 
+            timer1.Start();
+
         }
 
         private void flowLayoutPanel1_MouseClick(object sender, MouseEventArgs e)
@@ -114,7 +116,12 @@ namespace coposProject
             flowLayoutPanel1.Controls.Add(uc);
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label11.Text = DateTime.Now.ToLongTimeString();
+            label2.Text = DateTime.Now.ToLongDateString();  
 
+        }
 
 
     }

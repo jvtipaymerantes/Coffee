@@ -36,6 +36,7 @@ namespace coposProject
         private void purchaseForm_Load(object sender, EventArgs e)
         {
             textBox7.Text = overallTotal.ToString();
+            timer1.Start();
         }
 
         private void rectangleShape2_Click(object sender, EventArgs e)
@@ -457,6 +458,12 @@ namespace coposProject
             flowLayoutPanel1.Controls.Add(uc);
 
             clearPurchaseForm();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label31.Text = DateTime.Now.ToLongTimeString();
+            label2.Text = DateTime.Now.ToLongDateString(); 
         }
 
 

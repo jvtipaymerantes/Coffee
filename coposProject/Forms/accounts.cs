@@ -48,6 +48,17 @@ namespace coposProject
             
         }
 
+        private void accounts_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label11.Text = DateTime.Now.ToLongTimeString();
+            label2.Text = DateTime.Now.ToLongDateString(); 
+        }
+
 
 
     }

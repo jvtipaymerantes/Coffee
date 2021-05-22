@@ -70,5 +70,20 @@ namespace coposProject
             a.Show();
         }
 
+        private void salesForm_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label3.Text = DateTime.Now.ToLongTimeString();
+            label2.Text = DateTime.Now.ToLongDateString(); 
+        }
+
+
+       
+
+
     }
 }

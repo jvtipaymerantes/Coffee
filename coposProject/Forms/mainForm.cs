@@ -70,6 +70,17 @@ namespace coposProject
             a.Show();
         }
 
+        private void mainForm_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label13.Text = DateTime.Now.ToLongTimeString();
+            label2.Text = DateTime.Now.ToShortDateString(); 
+        }
+
 
 
     }

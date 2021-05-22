@@ -65,3 +65,23 @@ C:\Users\Bahay\Documents\Github\Coffee\coposProject\obj\x86\Debug\coposProject.u
 C:\Users\Bahay\Documents\Github\Coffee\coposProject\obj\x86\Debug\coposProject.csproj.GenerateResource.Cache
 C:\Users\Bahay\Documents\Github\Coffee\coposProject\obj\x86\Debug\coposProject.exe
 C:\Users\Bahay\Documents\Github\Coffee\coposProject\obj\x86\Debug\coposProject.pdb
+C:\Users\Mark Neil\Documents\GitHub\System Fundamentals\coposProject\obj\x86\Debug\coposProject.exe
+C:\Users\Mark Neil\Documents\GitHub\System Fundamentals\coposProject\obj\x86\Debug\coposProject.pdb
+C:\Users\Mark Neil\Documents\GitHub\System Fundamentals\coposProject\bin\Debug\coposProject.exe
+C:\Users\Mark Neil\Documents\GitHub\System Fundamentals\coposProject\bin\Debug\coposProject.pdb
+C:\Users\Mark Neil\Documents\GitHub\System Fundamentals\coposProject\obj\x86\Debug\coposProject.accounts.resources
+C:\Users\Mark Neil\Documents\GitHub\System Fundamentals\coposProject\obj\x86\Debug\coposProject.Form1.resources
+C:\Users\Mark Neil\Documents\GitHub\System Fundamentals\coposProject\obj\x86\Debug\coposProject.inventoryForm.resources
+C:\Users\Mark Neil\Documents\GitHub\System Fundamentals\coposProject\obj\x86\Debug\coposProject.login.resources
+C:\Users\Mark Neil\Documents\GitHub\System Fundamentals\coposProject\obj\x86\Debug\coposProject.mainForm.resources
+C:\Users\Mark Neil\Documents\GitHub\System Fundamentals\coposProject\obj\x86\Debug\coposProject.orderHistoryForm.resources
+C:\Users\Mark Neil\Documents\GitHub\System Fundamentals\coposProject\obj\x86\Debug\coposProject.salesForm.resources
+C:\Users\Mark Neil\Documents\GitHub\System Fundamentals\coposProject\obj\x86\Debug\coposProject.statisticsForm.resources
+C:\Users\Mark Neil\Documents\GitHub\System Fundamentals\coposProject\obj\x86\Debug\coposProject.Properties.Resources.resources
+C:\Users\Mark Neil\Documents\GitHub\System Fundamentals\coposProject\obj\x86\Debug\coposProject.purchaseForm.resources
+C:\Users\Mark Neil\Documents\GitHub\System Fundamentals\coposProject\obj\x86\Debug\coposProject.registerForm.resources
+C:\Users\Mark Neil\Documents\GitHub\System Fundamentals\coposProject\obj\x86\Debug\coposProject.purchasePaymentForm.resources
+C:\Users\Mark Neil\Documents\GitHub\System Fundamentals\coposProject\obj\x86\Debug\coposProject.shadowBg.resources
+C:\Users\Mark Neil\Documents\GitHub\System Fundamentals\coposProject\obj\x86\Debug\coposProject.ucInventory.resources
+C:\Users\Mark Neil\Documents\GitHub\System Fundamentals\coposProject\obj\x86\Debug\coposProject.userControl.purchaseOrderUc.resources
+C:\Users\Mark Neil\Documents\GitHub\System Fundamentals\coposProject\obj\x86\Debug\coposProject.csproj.GenerateResource.Cache
