@@ -26,6 +26,7 @@ namespace coposProject
         private void label12_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.OpenForms["shadowBg"].Close();
         }
 
         private void purchasePaymentForm_Load(object sender, EventArgs e)
@@ -111,6 +112,9 @@ namespace coposProject
 
             con.Close();
             this.Close();
+
+            purchaseForm.currentForm.flowLayoutPanel1.Controls.Clear();
+
         }
 
 
