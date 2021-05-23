@@ -479,18 +479,18 @@
             // 
             this.panel10.Controls.Add(this.flowLayoutPanel1);
             this.panel10.Controls.Add(this.shapeContainer2);
-            this.panel10.Location = new System.Drawing.Point(189, 127);
+            this.panel10.Location = new System.Drawing.Point(189, 77);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1157, 570);
+            this.panel10.Size = new System.Drawing.Size(1157, 632);
             this.panel10.TabIndex = 3;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(16, 16);
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(170)))), ((int)(((byte)(117)))));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(16, 85);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1123, 536);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1123, 532);
             this.flowLayoutPanel1.TabIndex = 1;
             this.flowLayoutPanel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseClick);
             // 
@@ -501,19 +501,19 @@
             this.shapeContainer2.Name = "shapeContainer2";
             this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.rectangleShape1});
-            this.shapeContainer2.Size = new System.Drawing.Size(1157, 570);
+            this.shapeContainer2.Size = new System.Drawing.Size(1157, 632);
             this.shapeContainer2.TabIndex = 0;
             this.shapeContainer2.TabStop = false;
             // 
             // rectangleShape1
             // 
-            this.rectangleShape1.BackColor = System.Drawing.Color.White;
+            this.rectangleShape1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(170)))), ((int)(((byte)(117)))));
             this.rectangleShape1.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.rectangleShape1.BorderColor = System.Drawing.Color.White;
-            this.rectangleShape1.CornerRadius = 7;
-            this.rectangleShape1.Location = new System.Drawing.Point(6, 7);
+            this.rectangleShape1.CornerRadius = 8;
+            this.rectangleShape1.Location = new System.Drawing.Point(6, 73);
             this.rectangleShape1.Name = "rectangleShape1";
-            this.rectangleShape1.Size = new System.Drawing.Size(1143, 555);
+            this.rectangleShape1.Size = new System.Drawing.Size(1143, 551);
             // 
             // inventoryForm
             // 

@@ -51,9 +51,9 @@
             // 
             // rectangleShape1
             // 
-            this.rectangleShape1.BackColor = System.Drawing.SystemColors.Control;
+            this.rectangleShape1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(72)))), ((int)(((byte)(50)))));
             this.rectangleShape1.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
-            this.rectangleShape1.BorderColor = System.Drawing.SystemColors.Control;
+            this.rectangleShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(72)))), ((int)(((byte)(50)))));
             this.rectangleShape1.CornerRadius = 6;
             this.rectangleShape1.Location = new System.Drawing.Point(5, 5);
             this.rectangleShape1.Name = "rectangleShape1";
@@ -104,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);

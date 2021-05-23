@@ -80,31 +80,26 @@ namespace coposProject
 
         private void inventoryForm_Load(object sender, EventArgs e)
         {
-            /*
+            
             con.Open();
 
             OleDbCommand cmd = con.CreateCommand();
-            cmd.CommandText = "select productCode, productName, productType from tblPurchaseReceipt";
-            OleDbCommand cmd2 = con.CreateCommand();
-            OleDbDataReader a = new OleDbDataReader();
-            a = cmd2.ExecuteReader();
+            //cmd.CommandText = "select productCode, productName, productType from tblPurchaseReceipt";
+            cmd.Connection = con;
+            string query = "select * from tblPurchaseReceipt";
+            cmd.CommandText = query;
+            OleDbDataReader myReader = cmd.ExecuteReader();
 
-            //while( a.Read() ){
+            while(myReader.Read()){
 
-                //ucInventory uc = new ucInventory();
+                ucInventory uc = new ucInventory();
 
-                //prCode = a("productCode");
-
+                prCode = myReader["productCode"].ToString();
+                MessageBox.Show(prCode.ToString());
             
-            //}
+            }
 
-
-
-
-            con.Close(); */
-
-            ucInventory uc = new ucInventory();
-            flowLayoutPanel1.Controls.Add(uc);
+            con.Close(); 
 
         }
 
