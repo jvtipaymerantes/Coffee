@@ -18,8 +18,12 @@ namespace coposProject.userControl
 
         }
 
+        //Value of Text Box (Code, Name, Description etc.)
+
         public string TextBox1Value
         {
+            
+
             get { return textBox2.Text; }
             set { textBox2.Text = value; }
         }

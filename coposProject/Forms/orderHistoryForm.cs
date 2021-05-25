@@ -6,14 +6,25 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace coposProject
 {
     public partial class orderHistoryForm : Form
     {
+
+        private OleDbConnection con = new OleDbConnection();
+        
+
+        public static string poId;
+        public static string poEmployee;
+        public static string poTotal;
+        public static string poDate;
+
         public orderHistoryForm()
         {
             InitializeComponent();
+            con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=coposDb.accdb";
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -69,6 +80,42 @@ namespace coposProject
             a.Closed += (s, args) => this.Close();
             a.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ucReceiptPo uc = new ucReceiptPo();
+            flowLayoutPanel1.Controls.Add(uc);
+        }
+
+        private void orderHistoryForm_Load(object sender, EventArgs e)
+        {
+            con.Open();
+
+            OleDbCommand cmd = con.CreateCommand();
+            //cmd.CommandText = "select productCode, productName, productType from tblPurchaseReceipt";
+            cmd.Connection = con;
+            string query = "select * from tblPurchaseTransaction";
+            cmd.CommandText = query;
+            OleDbDataReader myReader = cmd.ExecuteReader();
+
+            while (myReader.Read())
+            {
+                
+                poId = myReader["referenceID"].ToString();
+                poEmployee = myReader["employee"].ToString();
+                poTotal = myReader["total"].ToString();
+                poDate = myReader["purchaseDate"].ToString();
+                ucReceiptPo uc = new ucReceiptPo();
+                flowLayoutPanel1.Controls.Add(uc);
+                 
+            }
+
+            con.Close();
+
+            
+        }
+
+
 
 
     }

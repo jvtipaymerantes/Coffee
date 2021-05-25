@@ -70,5 +70,10 @@ namespace coposProject
             a.Show();
         }
 
+        private void rectangleShape2_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

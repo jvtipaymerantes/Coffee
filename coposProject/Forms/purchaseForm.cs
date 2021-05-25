@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.IO;
 
 namespace coposProject
 {
@@ -22,6 +23,8 @@ namespace coposProject
         public static string productExpDate;
         public static float productTotal;
         public static float overallTotal = 0;
+
+        public static string imagelocation = null;
 
         public static purchaseForm currentForm = null;
         
@@ -241,15 +244,28 @@ namespace coposProject
         private void pictureBox19_Click(object sender, EventArgs e)
         {
 
-            String imagelocation = "";
+            
+
             try {
                 
                 OpenFileDialog dialog = new OpenFileDialog();
                 dialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All Files(*.*)|*.*";
                 if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK){
+
                     imagelocation = dialog.FileName;
+                    pictureBox19.Tag = imagelocation;
                     pictureBox19.ImageLocation = imagelocation;
+                    MessageBox.Show(imagelocation.ToString() );
+
                     panel32.Visible = false;
+
+
+                    string fileName = System.Convert.ToString(DateTime.Now.Ticks) + ".jpeg";
+                    // To Create Random Filename
+                    string destFolder = Path.Combine("image/" , fileName);
+                    // Destination Folder kung san ilalagay yung Image (bin\Debug\image)
+                    File.Copy(imagelocation, destFolder, true);
+                    // Copy Image
                 }
 
             } catch(Exception){

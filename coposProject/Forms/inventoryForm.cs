@@ -92,11 +92,12 @@ namespace coposProject
 
             while(myReader.Read()){
 
-                ucInventory uc = new ucInventory();
-
                 prCode = myReader["productCode"].ToString();
-                MessageBox.Show(prCode.ToString());
-            
+                prName = myReader["productName"].ToString();
+                prType = myReader["productType"].ToString();
+                MessageBox.Show(prCode.ToString() + prName.ToString());
+                ucInventory uc = new ucInventory();
+                flowLayoutPanel1.Controls.Add(uc);
             }
 
             con.Close(); 
@@ -105,8 +106,7 @@ namespace coposProject
 
         private void flowLayoutPanel1_MouseClick(object sender, MouseEventArgs e)
         {
-            ucInventory uc = new ucInventory();
-            flowLayoutPanel1.Controls.Add(uc);
+            
         }
 
 

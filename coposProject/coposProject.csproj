@@ -114,6 +114,12 @@
     <Compile Include="Forms\statisticsForm.designer.cs">
       <DependentUpon>statisticsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\historyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\historyForm.Designer.cs">
+      <DependentUpon>historyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\purchaseForm.cs">
@@ -139,6 +145,12 @@
     </Compile>
     <Compile Include="Forms\shadowBg.Designer.cs">
       <DependentUpon>shadowBg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ucReceiptPo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\ucReceiptPo.Designer.cs">
+      <DependentUpon>ucReceiptPo.cs</DependentUpon>
     </Compile>
     <Compile Include="userControl\ucInventory.cs">
       <SubType>UserControl</SubType>
@@ -176,6 +188,9 @@
     <EmbeddedResource Include="Forms\statisticsForm.resx">
       <DependentUpon>statisticsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\historyForm.resx">
+      <DependentUpon>historyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -197,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\shadowBg.resx">
       <DependentUpon>shadowBg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucReceiptPo.resx">
+      <DependentUpon>ucReceiptPo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userControl\ucInventory.resx">
       <DependentUpon>ucInventory.cs</DependentUpon>

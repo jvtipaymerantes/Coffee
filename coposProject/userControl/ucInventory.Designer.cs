@@ -113,6 +113,7 @@
             this.Controls.Add(this.shapeContainer1);
             this.Name = "ucInventory";
             this.Size = new System.Drawing.Size(206, 264);
+            this.Load += new System.EventHandler(this.ucInventory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

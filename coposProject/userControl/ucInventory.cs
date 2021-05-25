@@ -15,5 +15,12 @@ namespace coposProject
         {
             InitializeComponent();
         }
+
+        private void ucInventory_Load(object sender, EventArgs e)
+        {
+            textBox1.Text = inventoryForm.prCode;
+            textBox2.Text = inventoryForm.prName;
+            textBox3.Text = inventoryForm.prType;
+        }
     }
 }
