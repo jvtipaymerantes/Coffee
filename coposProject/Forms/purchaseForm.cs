@@ -244,8 +244,6 @@ namespace coposProject
         private void pictureBox19_Click(object sender, EventArgs e)
         {
 
-            
-
             try {
                 
                 OpenFileDialog dialog = new OpenFileDialog();
@@ -255,22 +253,17 @@ namespace coposProject
                     imagelocation = dialog.FileName;
                     pictureBox19.Tag = imagelocation;
                     pictureBox19.ImageLocation = imagelocation;
-                    MessageBox.Show(imagelocation.ToString() );
 
                     panel32.Visible = false;
-
-
-                    string fileName = System.Convert.ToString(DateTime.Now.Ticks) + ".jpeg";
-                    // To Create Random Filename
-                    string destFolder = Path.Combine("image/" , fileName);
-                    // Destination Folder kung san ilalagay yung Image (bin\Debug\image)
-                    File.Copy(imagelocation, destFolder, true);
-                    // Copy Image
+                    rectangleShape27.Visible = false;
+                    pictureBox19.BackColor = Color.FromArgb(247, 207, 143);
                 }
 
             } catch(Exception){
                 MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+
+            insertData();
 
         }
 
@@ -296,6 +289,11 @@ namespace coposProject
 
         public void clearPurchaseForm()
         {
+
+            pictureBox19.Image = null;
+            panel32.Visible = true;
+            rectangleShape27.Visible = true;
+
             textBox1.Clear();
             textBox6.Clear();
             textBox2.Clear();
@@ -355,7 +353,8 @@ namespace coposProject
         }
 
         public void insertData(){
-            if (!(textBox6.Text.Equals("")) && !(textBox1.Text.Equals("")) && !(textBox2.Text.Equals("")) && !(textBox3.Text.Equals("")) && !(comboBox1.Text.Equals("UNIT")) && !(textBox5.Text.Equals("")) && !(comboBox2.Text.Equals("MONTH")) && !(comboBox3.Text.Equals("DAY")) && !(comboBox4.Text.Equals("YEAR")) && !(textBox4.Text.Equals("")))
+            //Validation ( ALL Picture Box / Text Box Must Have Value
+            if (!(textBox6.Text.Equals("")) && !(textBox1.Text.Equals("")) && !(textBox2.Text.Equals("")) && !(textBox3.Text.Equals("")) && !(comboBox1.Text.Equals("UNIT")) && !(textBox5.Text.Equals("")) && !(comboBox2.Text.Equals("MONTH")) && !(comboBox3.Text.Equals("DAY")) && !(comboBox4.Text.Equals("YEAR")) && !(textBox4.Text.Equals("")) && !(pictureBox19.ImageLocation == null) )
             {
                 label16.Visible = true;
                 pictureBox16.Visible = true;

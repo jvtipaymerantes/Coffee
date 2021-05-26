@@ -76,8 +76,15 @@ namespace coposProject.userControl
             set { textBox9.Text = value; }
         }
 
+        public string imageLoc
+        {
+            get { return label1.Text; }
+            set { label1.Text = value; }
+        }
+
         private void purchaseOrderUc_Load(object sender, EventArgs e)
         {
+            label1.Text = purchaseForm.imagelocation;
             textBox2.Text = purchaseForm.productCode;
             textBox1.Text = purchaseForm.productName;
             textBox3.Text = purchaseForm.productDescription;

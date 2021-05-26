@@ -14,6 +14,7 @@ namespace coposProject
     {
         private OleDbConnection con = new OleDbConnection();
 
+        public static string prImage;
         public static string prCode;
         public static string prName;
         public static string prType;
@@ -86,16 +87,17 @@ namespace coposProject
             OleDbCommand cmd = con.CreateCommand();
             //cmd.CommandText = "select productCode, productName, productType from tblPurchaseReceipt";
             cmd.Connection = con;
-            string query = "select * from tblPurchaseReceipt";
+            string query = "select * from tblStocks";
             cmd.CommandText = query;
             OleDbDataReader myReader = cmd.ExecuteReader();
 
             while(myReader.Read()){
 
+                prImage = myReader["productImage"].ToString();
                 prCode = myReader["productCode"].ToString();
                 prName = myReader["productName"].ToString();
                 prType = myReader["productType"].ToString();
-                MessageBox.Show(prCode.ToString() + prName.ToString());
+
                 ucInventory uc = new ucInventory();
                 flowLayoutPanel1.Controls.Add(uc);
             }

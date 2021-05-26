@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using coposProject.userControl;
+using System.IO;
 
 namespace coposProject
 {
@@ -37,7 +38,7 @@ namespace coposProject
             command.Connection = con;
             command.CommandText = "Select Count(*) from tblPurchaseTransaction";
             command.ExecuteNonQuery();
-            int transNum = (int)command.ExecuteScalar();
+            int transNum = (int)command.ExecuteScalar() + 1;
             con.Close();
 
             if (transNum == 0)
@@ -96,15 +97,38 @@ namespace coposProject
 
         private void label3_Click(object sender, EventArgs e)
         {
-            
+            addItems();
+        }
+
+        private void panel4_Click(object sender, EventArgs e)
+        {
+            addItems();
+        }
+
+        public void addItems()
+        {
+            //Add Items to database
             con.Open();
             OleDbCommand command = new OleDbCommand();
             command.Connection = con;
 
-            foreach (userControl.purchaseOrderUc uc in purchaseForm.currentForm.flowLayoutPanel1.Controls){
+            foreach (userControl.purchaseOrderUc uc in purchaseForm.currentForm.flowLayoutPanel1.Controls)
+            {
                 command.CommandText = " INSERT INTO tblPurchaseReceipt(referenceNo, productCode, productName, productDescription, productCostPerItem, productQty) values('" + textBox1.Text + "', '" + uc.TextBox1Value.ToString() + "', '" + uc.TextBox2Value.ToString() + "', '" + uc.TextBox3Value.ToString() + "', '" + uc.TextBox6Value.ToString() + "', '" + uc.TextBox8Value.ToString() + "') ";
                 command.ExecuteNonQuery();
-                MessageBox.Show("Data Saved!");
+
+                // To Create Random Filename
+                string fileName = System.Convert.ToString(DateTime.Now.Ticks) + ".jpeg";
+                // Destination Folder kung san ilalagay yung Image (bin\Debug\image) + image file name
+                string destFolder = Path.Combine("image/", fileName);
+
+                command.CommandText = " INSERT INTO tblStocks(productImage, productCode, productName, productDescription, productType, productUnit, productCostPerItem, productExpDate, productQty) values('" + destFolder + "', '" + uc.TextBox1Value.ToString() + "', '" + uc.TextBox2Value.ToString() + "', '" + uc.TextBox3Value.ToString() + "', '" + uc.TextBox4Value.ToString() + "', '" + uc.TextBox5Value.ToString() + "', '" + uc.TextBox6Value.ToString() + "', '" + uc.TextBox7Value.ToString() + "', '" + uc.TextBox8Value.ToString() + "') ";
+                command.ExecuteNonQuery();
+
+                // Copy Image
+                File.Copy(uc.imageLoc, destFolder, true);
+
+                MessageBox.Show("Data Saved! " + destFolder.ToString());
             }
 
             command.CommandText = " INSERT INTO tblPurchaseTransaction(referenceID, employee, total, tax, cashAmount, change, purchaseDate) values('" + textBox1.Text + "', '" + textBox5.Text + "', '" + textBox4.Text + "', '" + textBox3.Text + "', '" + textBox2.Text + "', '" + textBox6.Text + "', '" + DateTime.Now.ToString("MMddyyyy") + "') ";
@@ -112,10 +136,11 @@ namespace coposProject
 
             con.Close();
             this.Close();
+            shadowBg.currentShadow.Close();
 
             purchaseForm.currentForm.flowLayoutPanel1.Controls.Clear();
-
         }
+
 
 
 

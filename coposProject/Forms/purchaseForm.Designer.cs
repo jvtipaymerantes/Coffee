@@ -162,12 +162,12 @@
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.shapeContainer16 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.rectangleShape27 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape26 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape23 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape27 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.shapeContainer16 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -1106,6 +1106,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Grm",
             "Mg",
+            "ML",
             "Ounce"});
             this.comboBox1.Location = new System.Drawing.Point(150, 8);
             this.comboBox1.Name = "comboBox1";
@@ -1636,7 +1637,7 @@
             this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
             this.label14.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(72)))), ((int)(((byte)(50)))));
-            this.label14.Location = new System.Drawing.Point(6, 4);
+            this.label14.Location = new System.Drawing.Point(8, 4);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(171, 16);
             this.label14.TabIndex = 3;
@@ -1827,12 +1828,33 @@
             this.pictureBox19.Location = new System.Drawing.Point(33, 18);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(193, 192);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox19.TabIndex = 19;
             this.pictureBox19.TabStop = false;
             this.pictureBox19.Click += new System.EventHandler(this.pictureBox19_Click);
             this.pictureBox19.MouseLeave += new System.EventHandler(this.pictureBox19_MouseLeave);
             this.pictureBox19.MouseHover += new System.EventHandler(this.pictureBox19_MouseHover);
+            // 
+            // shapeContainer16
+            // 
+            this.shapeContainer16.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer16.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer16.Name = "shapeContainer16";
+            this.shapeContainer16.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.rectangleShape27});
+            this.shapeContainer16.Size = new System.Drawing.Size(244, 217);
+            this.shapeContainer16.TabIndex = 20;
+            this.shapeContainer16.TabStop = false;
+            // 
+            // rectangleShape27
+            // 
+            this.rectangleShape27.BackColor = System.Drawing.Color.White;
+            this.rectangleShape27.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
+            this.rectangleShape27.BorderColor = System.Drawing.Color.White;
+            this.rectangleShape27.CornerRadius = 6;
+            this.rectangleShape27.Location = new System.Drawing.Point(21, 12);
+            this.rectangleShape27.Name = "rectangleShape27";
+            this.rectangleShape27.Size = new System.Drawing.Size(214, 203);
             // 
             // shapeContainer2
             // 
@@ -1878,27 +1900,6 @@
             this.rectangleShape1.Location = new System.Drawing.Point(49, 25);
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(1209, 601);
-            // 
-            // rectangleShape27
-            // 
-            this.rectangleShape27.BackColor = System.Drawing.Color.White;
-            this.rectangleShape27.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
-            this.rectangleShape27.BorderColor = System.Drawing.Color.White;
-            this.rectangleShape27.CornerRadius = 6;
-            this.rectangleShape27.Location = new System.Drawing.Point(21, 12);
-            this.rectangleShape27.Name = "rectangleShape27";
-            this.rectangleShape27.Size = new System.Drawing.Size(214, 203);
-            // 
-            // shapeContainer16
-            // 
-            this.shapeContainer16.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer16.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer16.Name = "shapeContainer16";
-            this.shapeContainer16.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.rectangleShape27});
-            this.shapeContainer16.Size = new System.Drawing.Size(244, 217);
-            this.shapeContainer16.TabIndex = 20;
-            this.shapeContainer16.TabStop = false;
             // 
             // purchaseForm
             // 

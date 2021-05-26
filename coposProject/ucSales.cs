@@ -1,27 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
 namespace coposProject
 {
-    public partial class shadowBg : Form
+    public partial class ucSales : UserControl
     {
-
-        public static shadowBg currentShadow = null;
-
-        public shadowBg()
+        public ucSales()
         {
             InitializeComponent();
         }
 
-        private void shadowBg_Load(object sender, EventArgs e)
+        private void ucSales_Load(object sender, EventArgs e)
         {
-            currentShadow = this;
+            pictureBox1.ImageLocation = salesForm.prImage;
         }
     }
 }

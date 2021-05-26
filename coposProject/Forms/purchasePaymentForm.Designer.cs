@@ -159,7 +159,7 @@
             this.rectangleShape2.BackColor = System.Drawing.SystemColors.Control;
             this.rectangleShape2.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.rectangleShape2.BorderColor = System.Drawing.SystemColors.Control;
-            this.rectangleShape2.CornerRadius = 4;
+            this.rectangleShape2.CornerRadius = 2;
             this.rectangleShape2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rectangleShape2.Location = new System.Drawing.Point(9, 4);
             this.rectangleShape2.Name = "rectangleShape2";
@@ -171,7 +171,7 @@
             this.rectangleShape1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(117)))), ((int)(((byte)(235)))));
             this.rectangleShape1.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.rectangleShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(117)))), ((int)(((byte)(235)))));
-            this.rectangleShape1.CornerRadius = 4;
+            this.rectangleShape1.CornerRadius = 2;
             this.rectangleShape1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rectangleShape1.Location = new System.Drawing.Point(100, 4);
             this.rectangleShape1.Name = "rectangleShape1";
@@ -314,6 +314,7 @@
             this.panel4.Size = new System.Drawing.Size(333, 46);
             this.panel4.TabIndex = 23;
             this.panel4.Visible = false;
+            this.panel4.Click += new System.EventHandler(this.panel4_Click);
             // 
             // label3
             // 
