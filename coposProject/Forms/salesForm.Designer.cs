@@ -59,6 +59,11 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape11 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
@@ -103,10 +108,6 @@
             this.rectangleShape5 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -459,16 +460,74 @@
             // 
             // panel13
             // 
+            this.panel13.Controls.Add(this.flowLayoutPanel2);
             this.panel13.Controls.Add(this.label14);
             this.panel13.Controls.Add(this.label13);
             this.panel13.Controls.Add(this.label12);
             this.panel13.Controls.Add(this.label11);
             this.panel13.Controls.Add(this.label10);
             this.panel13.Controls.Add(this.shapeContainer1);
-            this.panel13.Location = new System.Drawing.Point(982, 23);
+            this.panel13.Location = new System.Drawing.Point(953, 23);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(310, 609);
+            this.panel13.Size = new System.Drawing.Size(339, 609);
             this.panel13.TabIndex = 3;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(5, 64);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(329, 480);
+            this.flowLayoutPanel2.TabIndex = 10;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.White;
+            this.label14.Font = new System.Drawing.Font("Helvetica", 8.25F);
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(296, 48);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(30, 12);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "Price";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.Font = new System.Drawing.Font("Helvetica", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(227, 48);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(25, 12);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "Qty.";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.Font = new System.Drawing.Font("Helvetica", 8.25F);
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(16, 48);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(34, 12);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Name";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(106, 11);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(90, 22);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Checkout";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label10
             // 
@@ -476,11 +535,12 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
             this.label10.Font = new System.Drawing.Font("Gotham", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
-            this.label10.Location = new System.Drawing.Point(102, 577);
+            this.label10.Location = new System.Drawing.Point(127, 578);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(115, 18);
             this.label10.TabIndex = 1;
             this.label10.Text = "PAY (00.00)";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // shapeContainer1
             // 
@@ -490,7 +550,7 @@
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.rectangleShape11,
             this.rectangleShape2});
-            this.shapeContainer1.Size = new System.Drawing.Size(310, 609);
+            this.shapeContainer1.Size = new System.Drawing.Size(339, 609);
             this.shapeContainer1.TabIndex = 0;
             this.shapeContainer1.TabStop = false;
             // 
@@ -502,7 +562,8 @@
             this.rectangleShape11.CornerRadius = 6;
             this.rectangleShape11.Location = new System.Drawing.Point(5, 568);
             this.rectangleShape11.Name = "rectangleShape11";
-            this.rectangleShape11.Size = new System.Drawing.Size(295, 35);
+            this.rectangleShape11.Size = new System.Drawing.Size(330, 35);
+            this.rectangleShape11.Click += new System.EventHandler(this.rectangleShape11_Click);
             // 
             // rectangleShape2
             // 
@@ -512,7 +573,7 @@
             this.rectangleShape2.CornerRadius = 6;
             this.rectangleShape2.Location = new System.Drawing.Point(5, 3);
             this.rectangleShape2.Name = "rectangleShape1";
-            this.rectangleShape2.Size = new System.Drawing.Size(295, 552);
+            this.rectangleShape2.Size = new System.Drawing.Size(329, 552);
             // 
             // panel12
             // 
@@ -535,7 +596,7 @@
             this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
             this.panel23.Controls.Add(this.label9);
             this.panel23.Controls.Add(this.shapeContainer9);
-            this.panel23.Location = new System.Drawing.Point(348, 25);
+            this.panel23.Location = new System.Drawing.Point(348, 19);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(59, 58);
             this.panel23.TabIndex = 16;
@@ -582,7 +643,7 @@
             this.panel22.Controls.Add(this.pictureBox15);
             this.panel22.Controls.Add(this.label8);
             this.panel22.Controls.Add(this.shapeContainer8);
-            this.panel22.Location = new System.Drawing.Point(283, 25);
+            this.panel22.Location = new System.Drawing.Point(283, 19);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(59, 58);
             this.panel22.TabIndex = 15;
@@ -640,7 +701,7 @@
             this.panel21.Controls.Add(this.pictureBox14);
             this.panel21.Controls.Add(this.label6);
             this.panel21.Controls.Add(this.shapeContainer7);
-            this.panel21.Location = new System.Drawing.Point(218, 25);
+            this.panel21.Location = new System.Drawing.Point(218, 19);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(59, 58);
             this.panel21.TabIndex = 14;
@@ -698,7 +759,7 @@
             this.panel19.Controls.Add(this.pictureBox13);
             this.panel19.Controls.Add(this.label5);
             this.panel19.Controls.Add(this.shapeContainer6);
-            this.panel19.Location = new System.Drawing.Point(153, 25);
+            this.panel19.Location = new System.Drawing.Point(153, 19);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(59, 58);
             this.panel19.TabIndex = 13;
@@ -756,7 +817,7 @@
             this.panel17.Controls.Add(this.pictureBox12);
             this.panel17.Controls.Add(this.label3);
             this.panel17.Controls.Add(this.shapeContainer5);
-            this.panel17.Location = new System.Drawing.Point(88, 25);
+            this.panel17.Location = new System.Drawing.Point(88, 19);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(59, 58);
             this.panel17.TabIndex = 12;
@@ -814,7 +875,7 @@
             this.panel24.Controls.Add(this.textBox1);
             this.panel24.Controls.Add(this.pictureBox17);
             this.panel24.Controls.Add(this.shapeContainer10);
-            this.panel24.Location = new System.Drawing.Point(622, 29);
+            this.panel24.Location = new System.Drawing.Point(600, 23);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(309, 45);
             this.panel24.TabIndex = 14;
@@ -873,7 +934,7 @@
             this.panel15.Controls.Add(this.pictureBox1);
             this.panel15.Controls.Add(this.label7);
             this.panel15.Controls.Add(this.shapeContainer4);
-            this.panel15.Location = new System.Drawing.Point(23, 25);
+            this.panel15.Location = new System.Drawing.Point(23, 19);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(59, 58);
             this.panel15.TabIndex = 11;
@@ -927,11 +988,12 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(28, 98);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(5, 83);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(9);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(897, 488);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(12);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(913, 513);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // shapeContainer3
@@ -952,9 +1014,9 @@
             this.rectangleShape5.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.rectangleShape5.BorderColor = System.Drawing.Color.White;
             this.rectangleShape5.CornerRadius = 5;
-            this.rectangleShape5.Location = new System.Drawing.Point(22, 91);
+            this.rectangleShape5.Location = new System.Drawing.Point(5, 83);
             this.rectangleShape5.Name = "rectangleShape5";
-            this.rectangleShape5.Size = new System.Drawing.Size(906, 498);
+            this.rectangleShape5.Size = new System.Drawing.Size(913, 520);
             // 
             // rectangleShape1
             // 
@@ -964,7 +1026,7 @@
             this.rectangleShape1.CornerRadius = 6;
             this.rectangleShape1.Location = new System.Drawing.Point(5, 3);
             this.rectangleShape1.Name = "rectangleShape1";
-            this.rectangleShape1.Size = new System.Drawing.Size(940, 600);
+            this.rectangleShape1.Size = new System.Drawing.Size(913, 600);
             // 
             // panel10
             // 
@@ -973,54 +1035,6 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(1322, 0);
             this.panel10.TabIndex = 5;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.White;
-            this.label11.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(106, 11);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(90, 22);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Checkout";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.White;
-            this.label12.Font = new System.Drawing.Font("Helvetica", 8.25F);
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(12, 48);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(34, 12);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Name";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.White;
-            this.label13.Font = new System.Drawing.Font("Helvetica", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(164, 48);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(25, 12);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "Qty.";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.White;
-            this.label14.Font = new System.Drawing.Font("Helvetica", 8.25F);
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(265, 49);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(30, 12);
-            this.label14.TabIndex = 9;
-            this.label14.Text = "Price";
             // 
             // salesForm
             // 
@@ -1170,5 +1184,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
     }
 }

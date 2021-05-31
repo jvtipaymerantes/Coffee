@@ -146,11 +146,23 @@
     <Compile Include="Forms\shadowBg.Designer.cs">
       <DependentUpon>shadowBg.cs</DependentUpon>
     </Compile>
+    <Compile Include="salesPaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="salesPaymentForm.designer.cs">
+      <DependentUpon>salesPaymentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucSales.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucSales.Designer.cs">
       <DependentUpon>ucSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSalesReceipt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSalesReceipt.Designer.cs">
+      <DependentUpon>ucSalesReceipt.cs</DependentUpon>
     </Compile>
     <Compile Include="userControl\ucReceiptPo.cs">
       <SubType>UserControl</SubType>
@@ -219,8 +231,14 @@
     <EmbeddedResource Include="Forms\shadowBg.resx">
       <DependentUpon>shadowBg.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="salesPaymentForm.resx">
+      <DependentUpon>salesPaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucSales.resx">
       <DependentUpon>ucSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSalesReceipt.resx">
+      <DependentUpon>ucSalesReceipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userControl\ucReceiptPo.resx">
       <DependentUpon>ucReceiptPo.cs</DependentUpon>

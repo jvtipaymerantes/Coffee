@@ -76,7 +76,7 @@
             this.cboxposition.Items.AddRange(new object[] {
             "Manager",
             "Employee"});
-            this.cboxposition.Location = new System.Drawing.Point(317, 245);
+            this.cboxposition.Location = new System.Drawing.Point(334, 245);
             this.cboxposition.Name = "cboxposition";
             this.cboxposition.Size = new System.Drawing.Size(226, 21);
             this.cboxposition.TabIndex = 22;
@@ -85,7 +85,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(314, 116);
+            this.label6.Location = new System.Drawing.Point(331, 116);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(101, 16);
             this.label6.TabIndex = 21;
@@ -93,7 +93,7 @@
             // 
             // txtboxid
             // 
-            this.txtboxid.Location = new System.Drawing.Point(317, 139);
+            this.txtboxid.Location = new System.Drawing.Point(334, 139);
             this.txtboxid.Name = "txtboxid";
             this.txtboxid.Size = new System.Drawing.Size(226, 20);
             this.txtboxid.TabIndex = 20;
@@ -102,7 +102,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(314, 336);
+            this.label5.Location = new System.Drawing.Point(331, 336);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 16);
             this.label5.TabIndex = 19;
@@ -112,7 +112,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(314, 279);
+            this.label4.Location = new System.Drawing.Point(331, 279);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 16);
             this.label4.TabIndex = 18;
@@ -122,7 +122,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(314, 226);
+            this.label3.Location = new System.Drawing.Point(331, 226);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 16);
             this.label3.TabIndex = 17;
@@ -132,7 +132,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(314, 173);
+            this.label2.Location = new System.Drawing.Point(331, 173);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 16);
             this.label2.TabIndex = 16;
@@ -140,21 +140,21 @@
             // 
             // txtboxpass
             // 
-            this.txtboxpass.Location = new System.Drawing.Point(317, 355);
+            this.txtboxpass.Location = new System.Drawing.Point(334, 355);
             this.txtboxpass.Name = "txtboxpass";
             this.txtboxpass.Size = new System.Drawing.Size(226, 20);
             this.txtboxpass.TabIndex = 15;
             // 
             // txtboxusern
             // 
-            this.txtboxusern.Location = new System.Drawing.Point(317, 298);
+            this.txtboxusern.Location = new System.Drawing.Point(334, 298);
             this.txtboxusern.Name = "txtboxusern";
             this.txtboxusern.Size = new System.Drawing.Size(226, 20);
             this.txtboxusern.TabIndex = 14;
             // 
             // txtboxname
             // 
-            this.txtboxname.Location = new System.Drawing.Point(317, 194);
+            this.txtboxname.Location = new System.Drawing.Point(334, 194);
             this.txtboxname.Name = "txtboxname";
             this.txtboxname.Size = new System.Drawing.Size(226, 20);
             this.txtboxname.TabIndex = 13;
@@ -164,8 +164,8 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(72)))), ((int)(((byte)(50)))));
             this.label1.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(745, 404);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
+            this.label1.Location = new System.Drawing.Point(747, 404);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 17);
             this.label1.TabIndex = 12;
@@ -294,7 +294,7 @@
             this.rectangleShape1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(72)))), ((int)(((byte)(50)))));
             this.rectangleShape1.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.rectangleShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(72)))), ((int)(((byte)(50)))));
-            this.rectangleShape1.CornerRadius = 4;
+            this.rectangleShape1.CornerRadius = 6;
             this.rectangleShape1.Location = new System.Drawing.Point(736, 397);
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(106, 30);
@@ -417,9 +417,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 104);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 77);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(296, 290);
+            this.pictureBox1.Size = new System.Drawing.Size(327, 323);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
@@ -452,6 +452,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.shapeContainer1);
             this.Name = "registerForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "registerForm";
             this.Load += new System.EventHandler(this.registerForm_Load);
             this.panel1.ResumeLayout(false);

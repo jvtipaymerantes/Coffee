@@ -17,7 +17,11 @@ namespace coposProject
         public static string prImage;
         public static string prCode;
         public static string prName;
-        public static string prType;
+        public static string prCost;
+
+        public static float overAll;
+
+        public static salesForm hereForm = null;
 
         public salesForm()
         {
@@ -309,10 +313,11 @@ namespace coposProject
 
         private void salesForm_Load(object sender, EventArgs e)
         {
+            hereForm = this;
+
             con.Open();
 
             OleDbCommand cmd = con.CreateCommand();
-            //cmd.CommandText = "select productCode, productName, productType from tblPurchaseReceipt";
             cmd.Connection = con;
             string query = "select * from tblStocks";
             cmd.CommandText = query;
@@ -322,14 +327,51 @@ namespace coposProject
             {
 
                 prImage = myReader["productImage"].ToString();
+                prCode = myReader["productCode"].ToString();
+                prName = myReader["productName"].ToString();
+                prCost = myReader["productCostPerItem"].ToString();
 
                 ucSales uc = new ucSales();
                 flowLayoutPanel1.Controls.Add(uc);
             }
 
-            con.Close(); 
+            con.Close();
+
+
         }
 
+        private void label11_Click(object sender, EventArgs e)
+        {
+            ucSalesReceipt a = new ucSalesReceipt();
+            flowLayoutPanel2.Controls.Add(a);
+        }
+
+        private void rectangleShape11_Click(object sender, EventArgs e)
+        {
+            
+            con.Open();
+
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = con;
+
+            foreach (ucSalesReceipt uc in flowLayoutPanel2.Controls)
+            {
+                overAll += float.Parse(uc.itemPrice);
+            }
+
+            MessageBox.Show(overAll.ToString() );
+
+            con.Close();
+
+            salesPaymentForm a = new salesPaymentForm();
+            a.Show();
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
 
     }
 }

@@ -224,6 +224,7 @@
             this.textBox2.ForeColor = System.Drawing.Color.DimGray;
             this.textBox2.Location = new System.Drawing.Point(21, 19);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(254, 13);
             this.textBox2.TabIndex = 0;
             this.textBox2.TabStop = false;
