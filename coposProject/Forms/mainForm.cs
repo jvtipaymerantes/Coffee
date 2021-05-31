@@ -70,7 +70,36 @@ namespace coposProject
             a.Show();
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+                /* Open Form that prevents Object Disposed Exception */
+                    this.Hide();
+                    var a = new login();
+                    a.Closed += (s, args) => this.Close();
+                    a.Show();
+       
+        }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label2.Text = DateTime.Now.ToShortTimeString();
+            label13.Text = DateTime.Now.ToShortDateString();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            timer1.Start();
+        }
+
+      
+
+            
 
     }
 }

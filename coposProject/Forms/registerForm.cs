@@ -42,5 +42,18 @@ namespace coposProject
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label9.Text = DateTime.Now.ToShortTimeString();
+            label12.Text = DateTime.Now.ToShortDateString();
+        }
+
+
     }
 }

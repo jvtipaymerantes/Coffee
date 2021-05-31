@@ -51,7 +51,26 @@ namespace coposProject
             a.Show();
         }
 
+        private void label11_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var a = new login();
+            a.Closed += (s, args) => this.Close();
+            a.Show();
+        }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label2.Text = DateTime.Now.ToLongTimeString();
+            label12.Text = DateTime.Now.ToLongDateString();
+        }
+
+        
 
     }
 }
