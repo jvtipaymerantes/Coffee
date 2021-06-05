@@ -147,22 +147,46 @@
     <Compile Include="Forms\shadowBg.Designer.cs">
       <DependentUpon>shadowBg.cs</DependentUpon>
     </Compile>
-    <Compile Include="salesPaymentForm.cs">
+    <Compile Include="Forms\salesPaymentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="salesPaymentForm.designer.cs">
+    <Compile Include="Forms\salesPaymentForm.designer.cs">
       <DependentUpon>salesPaymentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucSales.cs">
+    <Compile Include="Forms\startForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\startForm.designer.cs">
+      <DependentUpon>startForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\startFormTwo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\startFormTwo.designer.cs">
+      <DependentUpon>startFormTwo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\startFormThree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\startFormThree.designer.cs">
+      <DependentUpon>startFormThree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ucAcc.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucSales.Designer.cs">
+    <Compile Include="userControl\ucAcc.Designer.cs">
+      <DependentUpon>ucAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ucSales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\ucSales.Designer.cs">
       <DependentUpon>ucSales.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucSalesReceipt.cs">
+    <Compile Include="userControl\ucSalesReceipt.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucSalesReceipt.Designer.cs">
+    <Compile Include="userControl\ucSalesReceipt.Designer.cs">
       <DependentUpon>ucSalesReceipt.cs</DependentUpon>
     </Compile>
     <Compile Include="userControl\ucReceiptPo.cs">
@@ -232,13 +256,25 @@
     <EmbeddedResource Include="Forms\shadowBg.resx">
       <DependentUpon>shadowBg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="salesPaymentForm.resx">
+    <EmbeddedResource Include="Forms\salesPaymentForm.resx">
       <DependentUpon>salesPaymentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucSales.resx">
+    <EmbeddedResource Include="Forms\startForm.resx">
+      <DependentUpon>startForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\startFormTwo.resx">
+      <DependentUpon>startFormTwo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\startFormThree.resx">
+      <DependentUpon>startFormThree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucAcc.resx">
+      <DependentUpon>ucAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucSales.resx">
       <DependentUpon>ucSales.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucSalesReceipt.resx">
+    <EmbeddedResource Include="userControl\ucSalesReceipt.resx">
       <DependentUpon>ucSalesReceipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userControl\ucReceiptPo.resx">

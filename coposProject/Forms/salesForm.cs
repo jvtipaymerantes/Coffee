@@ -83,233 +83,7 @@ namespace coposProject
             a.Show();
         }
 
-        private void rectangleShape3_Click(object sender, EventArgs e)
-        {
-            //Coffee
-            pictureBox1.BackColor = Color.FromArgb(229, 192, 132);
-            label7.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape4.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape4.BorderColor = Color.FromArgb(229, 192, 132);
 
-            //  Milk
-            pictureBox12.BackColor = Color.FromArgb(186, 155, 105);
-            label3.BackColor = Color.FromArgb(186, 155, 105);
-            rectangleShape3.BackColor = Color.FromArgb(186, 155, 105);
-            rectangleShape3.BorderColor = Color.FromArgb(186, 155, 105);
-
-            //Sugar
-            pictureBox13.BackColor = Color.FromArgb(229, 192, 132);
-            label5.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape6.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape6.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //Tea
-            pictureBox14.BackColor = Color.FromArgb(229, 192, 132);
-            label6.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape7.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape7.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //Syrup
-            pictureBox15.BackColor = Color.FromArgb(229, 192, 132);
-            label8.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape8.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape8.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //Other
-            label9.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape9.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape9.BorderColor = Color.FromArgb(229, 192, 132);
-        }
-
-        private void rectangleShape6_Click(object sender, EventArgs e)
-        {
-            //Coffee
-            pictureBox1.BackColor = Color.FromArgb(229, 192, 132);
-            label7.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape4.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape4.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //Milk
-            pictureBox12.BackColor = Color.FromArgb(229, 192, 132);
-            label3.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape3.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape3.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //  Sugar
-            pictureBox13.BackColor = Color.FromArgb(186, 155, 105);
-            label5.BackColor = Color.FromArgb(186, 155, 105);
-            rectangleShape6.BackColor = Color.FromArgb(186, 155, 105);
-            rectangleShape6.BorderColor = Color.FromArgb(186, 155, 105);
-
-            //Tea
-            pictureBox14.BackColor = Color.FromArgb(229, 192, 132);
-            label6.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape7.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape7.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //Syrup
-            pictureBox15.BackColor = Color.FromArgb(229, 192, 132);
-            label8.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape8.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape8.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //Other
-            label9.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape9.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape9.BorderColor = Color.FromArgb(229, 192, 132);
-        }
-
-        private void rectangleShape7_Click(object sender, EventArgs e)
-        {
-            //Coffee
-            pictureBox1.BackColor = Color.FromArgb(229, 192, 132);
-            label7.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape4.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape4.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //Milk
-            pictureBox12.BackColor = Color.FromArgb(229, 192, 132);
-            label3.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape3.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape3.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //Sugar
-            pictureBox13.BackColor = Color.FromArgb(229, 192, 132);
-            label5.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape6.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape6.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //  Tea
-            pictureBox14.BackColor = Color.FromArgb(186, 155, 105);
-            label6.BackColor = Color.FromArgb(186, 155, 105);
-            rectangleShape7.BackColor = Color.FromArgb(186, 155, 105);
-            rectangleShape7.BorderColor = Color.FromArgb(186, 155, 105);
-
-            //Syrup
-            pictureBox15.BackColor = Color.FromArgb(229, 192, 132);
-            label8.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape8.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape8.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //Other
-            label9.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape9.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape9.BorderColor = Color.FromArgb(229, 192, 132);
-        }
-
-        private void rectangleShape8_Click(object sender, EventArgs e)
-        {
-            //Coffee
-            pictureBox1.BackColor = Color.FromArgb(229, 192, 132);
-            label7.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape4.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape4.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //Milk
-            pictureBox12.BackColor = Color.FromArgb(229, 192, 132);
-            label3.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape3.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape3.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //Sugar
-            pictureBox13.BackColor = Color.FromArgb(229, 192, 132);
-            label5.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape6.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape6.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //Tea
-            pictureBox14.BackColor = Color.FromArgb(229, 192, 132);
-            label6.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape7.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape7.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //  Syrup
-            pictureBox15.BackColor = Color.FromArgb(186, 155, 105);
-            label8.BackColor = Color.FromArgb(186, 155, 105);
-            rectangleShape8.BackColor = Color.FromArgb(186, 155, 105);
-            rectangleShape8.BorderColor = Color.FromArgb(186, 155, 105);
-
-            //Other
-            label9.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape9.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape9.BorderColor = Color.FromArgb(229, 192, 132);
-        }
-
-        private void rectangleShape9_Click(object sender, EventArgs e)
-        {
-            //Coffee
-            pictureBox1.BackColor = Color.FromArgb(229, 192, 132);
-            label7.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape4.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape4.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //Milk
-            pictureBox12.BackColor = Color.FromArgb(229, 192, 132);
-            label3.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape3.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape3.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //Sugar
-            pictureBox13.BackColor = Color.FromArgb(229, 192, 132);
-            label5.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape6.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape6.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //Tea
-            pictureBox14.BackColor = Color.FromArgb(229, 192, 132);
-            label6.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape7.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape7.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //Syrup
-            pictureBox15.BackColor = Color.FromArgb(229, 192, 132);
-            label8.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape8.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape8.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //  Other
-            label9.BackColor = Color.FromArgb(186, 155, 105);
-            rectangleShape9.BackColor = Color.FromArgb(186, 155, 105);
-            rectangleShape9.BorderColor = Color.FromArgb(186, 155, 105);
-        }
-
-        private void rectangleShape4_Click(object sender, EventArgs e)
-        {
-            //  Coffee
-            pictureBox1.BackColor = Color.FromArgb(186, 155, 105);
-            label7.BackColor = Color.FromArgb(186, 155, 105);
-            rectangleShape4.BackColor = Color.FromArgb(186, 155, 105);
-            rectangleShape4.BorderColor = Color.FromArgb(186, 155, 105);
-
-            //Milk
-            pictureBox12.BackColor = Color.FromArgb(229, 192, 132);
-            label3.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape3.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape3.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //Sugar
-            pictureBox13.BackColor = Color.FromArgb(229, 192, 132);
-            label5.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape6.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape6.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //Tea
-            pictureBox14.BackColor = Color.FromArgb(229, 192, 132);
-            label6.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape7.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape7.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //Syrup
-            pictureBox15.BackColor = Color.FromArgb(229, 192, 132);
-            label8.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape8.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape8.BorderColor = Color.FromArgb(229, 192, 132);
-
-            //Other
-            label9.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape9.BackColor = Color.FromArgb(229, 192, 132);
-            rectangleShape9.BorderColor = Color.FromArgb(229, 192, 132);
-        }
 
         private void salesForm_Load(object sender, EventArgs e)
         {
@@ -390,6 +164,88 @@ namespace coposProject
         {
             label2.Text = DateTime.Now.ToLongTimeString();
             label15.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+
+            con.Open();
+
+            OleDbCommand cmd = con.CreateCommand();
+            cmd.Connection = con;
+            string query = "select * from tblStocks where productName LIKE '%"+ textBox1.Text +"%' ";
+            cmd.CommandText = query;
+            OleDbDataReader myReader = cmd.ExecuteReader();
+
+            while (myReader.Read())
+            {
+
+                prImage = myReader["productImage"].ToString();
+                prCode = myReader["productCode"].ToString();
+                prName = myReader["productName"].ToString();
+                prCost = myReader["productCostPerItem"].ToString();
+
+                ucSales uc = new ucSales();
+                flowLayoutPanel1.Controls.Add(uc);
+            }
+
+            con.Close();
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            con.Open();
+
+            if (comboBox1.Text.Equals("All"))
+            {
+                OleDbCommand cmd = con.CreateCommand();
+                cmd.Connection = con;
+                string query = "select * from tblStocks";
+                cmd.CommandText = query;
+                OleDbDataReader myReader = cmd.ExecuteReader();
+
+                while (myReader.Read())
+                {
+
+                    prImage = myReader["productImage"].ToString();
+                    prCode = myReader["productCode"].ToString();
+                    prName = myReader["productName"].ToString();
+                    prCost = myReader["productCostPerItem"].ToString();
+
+                    ucSales uc = new ucSales();
+                    flowLayoutPanel1.Controls.Add(uc);
+                }
+            }
+            else
+            {
+                flowLayoutPanel1.Controls.Clear();
+
+                
+
+                OleDbCommand cmd = con.CreateCommand();
+                cmd.Connection = con;
+                string query = "select * from tblStocks where productType LIKE '%" + comboBox1.Text + "%' ";
+                cmd.CommandText = query;
+                OleDbDataReader myReader = cmd.ExecuteReader();
+
+                while (myReader.Read())
+                {
+
+                    prImage = myReader["productImage"].ToString();
+                    prCode = myReader["productCode"].ToString();
+                    prName = myReader["productName"].ToString();
+                    prCost = myReader["productCostPerItem"].ToString();
+
+                    ucSales uc = new ucSales();
+                    flowLayoutPanel1.Controls.Add(uc);
+                }
+
+                
+            }// End of If
+
+            con.Close();
         }
 
 

@@ -125,14 +125,31 @@ namespace coposProject
             label12.Text = DateTime.Now.ToLongDateString();
         }
 
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
 
+            con.Open();
 
-       
+            OleDbCommand cmd = con.CreateCommand();
+            cmd.Connection = con;
+            string query = "select * from tblStocks where productName LIKE '%" + textBox1.Text + "%' ";
+            cmd.CommandText = query;
+            OleDbDataReader myReader = cmd.ExecuteReader();
 
+            while (myReader.Read())
+            {
 
-       
+                prImage = myReader["productImage"].ToString();
+                prCode = myReader["productCode"].ToString();
+                prName = myReader["productName"].ToString();
 
+                ucInventory uc = new ucInventory();
+                flowLayoutPanel1.Controls.Add(uc);
+            }
 
+            con.Close();
+        }
 
 
     }

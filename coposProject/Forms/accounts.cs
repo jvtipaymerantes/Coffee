@@ -6,14 +6,23 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace coposProject
 {
     public partial class accounts : Form
     {
+        private OleDbConnection con = new OleDbConnection();
+
+        public static string empId;
+        public static string empName;
+        public static string empPos;
+        public static string empUser;
+
         public accounts()
         {
             InitializeComponent();
+            con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=coposDb.accdb";
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -68,6 +77,32 @@ namespace coposProject
         {
             label2.Text = DateTime.Now.ToLongTimeString();
             label12.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void accounts_Load(object sender, EventArgs e)
+        {
+            con.Open();
+
+            OleDbCommand cmd = con.CreateCommand();
+            //cmd.CommandText = "select employeeID, employeeName, employeePosition, employeeUsername from registration";
+            cmd.Connection = con;
+            string query = "select * from registration";
+            cmd.CommandText = query;
+            OleDbDataReader myReader = cmd.ExecuteReader();
+
+            while (myReader.Read())
+            {
+
+                empId = myReader["employeeID"].ToString();
+                empName = myReader["employeeName"].ToString();
+                empPos = myReader["employeePosition"].ToString();
+                empUser = myReader["employeeUsername"].ToString();
+                ucAcc uc = new ucAcc();
+                flowLayoutPanel1.Controls.Add(uc);
+
+            }
+
+            con.Close();
         }
 
         
