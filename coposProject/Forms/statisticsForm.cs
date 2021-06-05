@@ -5,16 +5,20 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Data.OleDb;
 using System.Windows.Forms;
 
 namespace coposProject
 {
     public partial class statisticsForm : Form
     {
+        private OleDbConnection con = new OleDbConnection();
         public statisticsForm()
         {
             InitializeComponent();
+            con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=coposDb.accdb";
         }
+
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -89,7 +93,72 @@ namespace coposProject
             label12.Text = DateTime.Now.ToLongDateString();
         }
 
+        private void showBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = con;
+                string query = "select * from purchasedItem";
+                command.CommandText = query;
+
+                OleDbDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    chart1.Series["Purchases"].Points.AddXY(reader["purchaseOrder"].ToString(), reader["stockPerItem"].ToString());
+
+                }
+
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex);
+            } 
 
 
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = con;
+                string query = "select * from tblStocks";
+                command.CommandText = query;
+
+                OleDbDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    chart2.Series["Stocks"].Points.AddXY(reader["productType"].ToString(), reader["productQty"].ToString());
+
+                }
+
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex);
+            } 
+
+
+
+
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
