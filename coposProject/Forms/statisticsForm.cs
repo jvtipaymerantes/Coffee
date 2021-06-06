@@ -174,7 +174,6 @@ namespace coposProject
                 while (reader.Read())
                 {
                     chart1.Series["Net Income"].Points.AddXY(reader["total"].ToString(), reader["cashAmount"].ToString());
-                    chart1.Series["Gross Income"].Points.AddXY(reader["total"].ToString(), reader["cashAmount"].ToString());
 
                 }
 
@@ -184,7 +183,29 @@ namespace coposProject
             catch (Exception ex)
             {
                 MessageBox.Show("Error " + ex);
-            } 
+            }
+            try
+            {
+                con.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = con;
+                string query = "select * from tblPurchaseTransaction";
+                command.CommandText = query;
+
+                OleDbDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    chart3.Series["Gross Income"].Points.AddXY(reader["total"].ToString(), reader["cashAmount"].ToString());
+
+                }
+
+                con.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex);
+            }
 
 
 
