@@ -72,6 +72,11 @@
             this.rectangleShape11 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.shapeContainer4 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.rectangleShape3 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.panel15 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
@@ -83,11 +88,6 @@
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.panel10 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.shapeContainer4 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.rectangleShape3 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -114,9 +114,9 @@
             this.panel11.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
+            this.panel17.SuspendLayout();
             this.panel24.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            this.panel17.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -473,8 +473,9 @@
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(5, 64);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(329, 480);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(329, 460);
             this.flowLayoutPanel2.TabIndex = 10;
+            this.flowLayoutPanel2.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.flowLayoutPanel2_ControlAdded);
             // 
             // label14
             // 
@@ -518,7 +519,7 @@
             this.label11.BackColor = System.Drawing.Color.White;
             this.label11.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(106, 11);
+            this.label11.Location = new System.Drawing.Point(136, 11);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(90, 22);
             this.label11.TabIndex = 6;
@@ -583,13 +584,76 @@
             this.panel12.Size = new System.Drawing.Size(953, 609);
             this.panel12.TabIndex = 2;
             // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
+            this.panel17.Controls.Add(this.comboBox1);
+            this.panel17.Controls.Add(this.shapeContainer4);
+            this.panel17.Location = new System.Drawing.Point(339, 23);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(197, 45);
+            this.panel17.TabIndex = 15;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(72)))), ((int)(((byte)(50)))));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "All",
+            "Coffee Bean",
+            "Milk",
+            "Sugar",
+            "Syrup",
+            "Tea",
+            "Others"});
+            this.comboBox1.Location = new System.Drawing.Point(21, 13);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(154, 22);
+            this.comboBox1.TabIndex = 6;
+            this.comboBox1.Text = "Filter";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // shapeContainer4
+            // 
+            this.shapeContainer4.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer4.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer4.Name = "shapeContainer4";
+            this.shapeContainer4.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.rectangleShape3});
+            this.shapeContainer4.Size = new System.Drawing.Size(197, 45);
+            this.shapeContainer4.TabIndex = 0;
+            this.shapeContainer4.TabStop = false;
+            // 
+            // rectangleShape3
+            // 
+            this.rectangleShape3.BackColor = System.Drawing.Color.White;
+            this.rectangleShape3.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
+            this.rectangleShape3.BorderColor = System.Drawing.Color.White;
+            this.rectangleShape3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.rectangleShape3.CornerRadius = 18;
+            this.rectangleShape3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rectangleShape3.Location = new System.Drawing.Point(1, 5);
+            this.rectangleShape3.Name = "rectangleShape4";
+            this.rectangleShape3.SelectionColor = System.Drawing.Color.Transparent;
+            this.rectangleShape3.Size = new System.Drawing.Size(188, 37);
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.White;
+            this.panel15.Location = new System.Drawing.Point(888, 77);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(17, 511);
+            this.panel15.TabIndex = 15;
+            // 
             // panel24
             // 
             this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
             this.panel24.Controls.Add(this.textBox1);
             this.panel24.Controls.Add(this.pictureBox17);
             this.panel24.Controls.Add(this.shapeContainer10);
-            this.panel24.Location = new System.Drawing.Point(600, 23);
+            this.panel24.Location = new System.Drawing.Point(23, 23);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(309, 45);
             this.panel24.TabIndex = 14;
@@ -600,9 +664,9 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox1.Location = new System.Drawing.Point(19, 17);
+            this.textBox1.Location = new System.Drawing.Point(49, 15);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(251, 16);
+            this.textBox1.Size = new System.Drawing.Size(239, 16);
             this.textBox1.TabIndex = 10;
             this.textBox1.TabStop = false;
             this.textBox1.Text = "Search Product";
@@ -612,7 +676,7 @@
             // 
             this.pictureBox17.BackColor = System.Drawing.Color.White;
             this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
-            this.pictureBox17.Location = new System.Drawing.Point(275, 13);
+            this.pictureBox17.Location = new System.Drawing.Point(19, 13);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(24, 22);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -647,10 +711,10 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(5, 83);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(29, 76);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(15, 12, 12, 12);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(913, 513);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(14, 12, 9, 12);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(876, 512);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // shapeContainer3
@@ -671,9 +735,9 @@
             this.rectangleShape5.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.rectangleShape5.BorderColor = System.Drawing.Color.White;
             this.rectangleShape5.CornerRadius = 5;
-            this.rectangleShape5.Location = new System.Drawing.Point(5, 83);
+            this.rectangleShape5.Location = new System.Drawing.Point(24, 76);
             this.rectangleShape5.Name = "rectangleShape5";
-            this.rectangleShape5.Size = new System.Drawing.Size(913, 520);
+            this.rectangleShape5.Size = new System.Drawing.Size(883, 511);
             // 
             // rectangleShape1
             // 
@@ -698,69 +762,6 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.White;
-            this.panel15.Location = new System.Drawing.Point(900, 83);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(17, 513);
-            this.panel15.TabIndex = 15;
-            // 
-            // panel17
-            // 
-            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
-            this.panel17.Controls.Add(this.comboBox1);
-            this.panel17.Controls.Add(this.shapeContainer4);
-            this.panel17.Location = new System.Drawing.Point(400, 23);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(197, 45);
-            this.panel17.TabIndex = 15;
-            // 
-            // shapeContainer4
-            // 
-            this.shapeContainer4.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer4.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer4.Name = "shapeContainer4";
-            this.shapeContainer4.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.rectangleShape3});
-            this.shapeContainer4.Size = new System.Drawing.Size(197, 45);
-            this.shapeContainer4.TabIndex = 0;
-            this.shapeContainer4.TabStop = false;
-            // 
-            // rectangleShape3
-            // 
-            this.rectangleShape3.BackColor = System.Drawing.Color.White;
-            this.rectangleShape3.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
-            this.rectangleShape3.BorderColor = System.Drawing.Color.White;
-            this.rectangleShape3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.rectangleShape3.CornerRadius = 18;
-            this.rectangleShape3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rectangleShape3.Location = new System.Drawing.Point(1, 5);
-            this.rectangleShape3.Name = "rectangleShape4";
-            this.rectangleShape3.SelectionColor = System.Drawing.Color.Transparent;
-            this.rectangleShape3.Size = new System.Drawing.Size(188, 37);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(72)))), ((int)(((byte)(50)))));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "All",
-            "Coffee Bean",
-            "Milk",
-            "Sugar",
-            "Syrup",
-            "Tea",
-            "Others"});
-            this.comboBox1.Location = new System.Drawing.Point(21, 13);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(154, 22);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.Text = "Filter";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // salesForm
             // 
@@ -808,10 +809,10 @@
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             this.panel12.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
             this.panel24.ResumeLayout(false);
             this.panel24.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            this.panel17.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -846,7 +847,6 @@
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.Label label1;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
         private System.Windows.Forms.Panel panel13;
@@ -876,5 +876,6 @@
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer4;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape3;
         public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.Label label1;
     }
 }

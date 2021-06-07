@@ -19,6 +19,7 @@ namespace coposProject
         public static string productType;
         public static string productUnit;
         public static string productQuantity;
+        public static string productSellingPrice;
         public static string productCostperItem;
         public static string productExpDate;
         public static float productTotal;
@@ -28,8 +29,8 @@ namespace coposProject
 
         public static purchaseForm currentForm = null;
         
-
         private OleDbConnection con = new OleDbConnection();
+
         public purchaseForm()
         {
             InitializeComponent();
@@ -38,7 +39,7 @@ namespace coposProject
 
         private void purchaseForm_Load(object sender, EventArgs e)
         {
-            textBox7.Text = overallTotal.ToString();
+            
         }
 
         private void rectangleShape2_Click(object sender, EventArgs e)
@@ -221,6 +222,7 @@ namespace coposProject
             productUnit = unit.ToString();
 
             productQuantity = textBox4.Text;
+            productSellingPrice = textBox8.Text;
             productCostperItem = textBox5.Text;
 
             StringBuilder expDate = new StringBuilder();
@@ -232,12 +234,17 @@ namespace coposProject
             productTotal = float.Parse(productQuantity) * float.Parse(productCostperItem);
             
             overallTotal = overallTotal + productTotal;
-            textBox7.Text = overallTotal.ToString();
 
             userControl.purchaseOrderUc uc = new userControl.purchaseOrderUc();
             flowLayoutPanel1.Controls.Add(uc);
 
             clearPurchaseForm();
+
+            StringBuilder sbTotal = new StringBuilder();
+            sbTotal.Append("(");
+            sbTotal.Append(overallTotal.ToString());
+            sbTotal.Append(")");
+            label30.Text = sbTotal.ToString();
 
         }
 
@@ -291,6 +298,7 @@ namespace coposProject
         {
 
             pictureBox19.Image = null;
+            pictureBox19.BackColor = Color.White;
             panel32.Visible = true;
             rectangleShape27.Visible = true;
 
@@ -301,6 +309,7 @@ namespace coposProject
             comboBox1.Text = "UNIT";
             textBox4.Clear();
             textBox5.Clear();
+            textBox8.Clear();
             comboBox2.Text = "MONTH";
             comboBox3.Text = "DAY";
             comboBox4.Text = "YEAR";
@@ -414,64 +423,12 @@ namespace coposProject
 
         private void pictureBox16_Click(object sender, EventArgs e)
         {
-            productName = textBox1.Text;
-            productCode = textBox6.Text;
-            productDescription = textBox2.Text;
-
-            StringBuilder unit = new StringBuilder();
-            unit.Append(textBox3.Text);
-            unit.Append(comboBox1.Text);
-            productUnit = unit.ToString();
-
-            productQuantity = textBox4.Text;
-            productCostperItem = textBox5.Text;
-
-            StringBuilder expDate = new StringBuilder();
-            expDate.Append(comboBox2.Text + " ");
-            expDate.Append(comboBox3.Text + " ");
-            expDate.Append(comboBox4.Text);
-            productExpDate = expDate.ToString();
-
-            productTotal = float.Parse(productQuantity) * float.Parse(productCostperItem);
-
-            overallTotal = overallTotal + productTotal;
-            textBox7.Text = overallTotal.ToString();
-
-            userControl.purchaseOrderUc uc = new userControl.purchaseOrderUc();
-            flowLayoutPanel1.Controls.Add(uc);
-
-            clearPurchaseForm();
+            
         }
 
         private void rectangleShape23_Click(object sender, EventArgs e)
         {
-            productName = textBox1.Text;
-            productCode = textBox6.Text;
-            productDescription = textBox2.Text;
-
-            StringBuilder unit = new StringBuilder();
-            unit.Append(textBox3.Text);
-            unit.Append(comboBox1.Text);
-            productUnit = unit.ToString();
-
-            productQuantity = textBox4.Text;
-            productCostperItem = textBox5.Text;
-
-            StringBuilder expDate = new StringBuilder();
-            expDate.Append(comboBox2.Text + " ");
-            expDate.Append(comboBox3.Text + " ");
-            expDate.Append(comboBox4.Text);
-            productExpDate = expDate.ToString();
-
-            productTotal = float.Parse(productQuantity) * float.Parse(productCostperItem);
-
-            overallTotal = overallTotal + productTotal;
-            textBox7.Text = overallTotal.ToString();
-
-            userControl.purchaseOrderUc uc = new userControl.purchaseOrderUc();
-            flowLayoutPanel1.Controls.Add(uc);
-
-            clearPurchaseForm();
+            
         }
 
         private void pictureBox20_Click(object sender, EventArgs e)
@@ -515,6 +472,46 @@ namespace coposProject
         {
             label2.Text = DateTime.Now.ToLongTimeString();
             label31.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void flowLayoutPanel1_ControlRemoved(object sender, ControlEventArgs e)
+        {
+            if (overallTotal == 0)
+            {
+                label30.Text = "00.00";
+            }
+            else
+            {
+                StringBuilder sbTotal = new StringBuilder();
+                sbTotal.Append("(");
+                sbTotal.Append(overallTotal.ToString());
+                sbTotal.Append(")");
+                label30.Text = sbTotal.ToString();
+            }
+        }
+
+        private void rectangleShape26_Click(object sender, EventArgs e)
+        {
+            currentForm = this;
+
+            purchasePaymentForm a = new purchasePaymentForm();
+            a.Show();
+            a.TopMost = true;
+
+            shadowBg bg = new shadowBg();
+            bg.Show();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            currentForm = this;
+
+            purchasePaymentForm a = new purchasePaymentForm();
+            a.Show();
+            a.TopMost = true;
+
+            shadowBg bg = new shadowBg();
+            bg.Show();
         }
 
 

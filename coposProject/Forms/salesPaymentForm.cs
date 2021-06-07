@@ -26,17 +26,19 @@ namespace coposProject
 
         private void label12_Click(object sender, EventArgs e)
         {
-            //this.Close();
-            //Application.OpenForms["shadowBg"].Close();
+            this.Close();
         }
 
         private void salesPaymentForm_Load(object sender, EventArgs e)
         {
 
+            textBox4.Text = salesForm.overAll.ToString();
+            textBox5.Text = salesForm.hereForm.labelText.ToString();
+
             con.Open();
             OleDbCommand command = new OleDbCommand();
             command.Connection = con;
-            command.CommandText = "Select Count(*) from tblPurchaseTransaction";
+            command.CommandText = "Select Count(*) from tblPurchaseTransaction where type = 'Sales' ";
             command.ExecuteNonQuery();
             int transNum = (int)command.ExecuteScalar() + 1;
             con.Close();
@@ -66,32 +68,15 @@ namespace coposProject
 
             textBox1.Text = rf.ToString();
 
-            purchaseForm a = new purchaseForm();
-            textBox5.Text = a.LabelText;
-
-            /*con.Open();
-            foreach (ucSalesReceipt uc in salesForm.hereForm.flowLayoutPanel2.Controls)
-            {
-                command.CommandText = " INSERT INTO tblPurchaseReceipt(referenceNo, productCode, productName, productDescription, productCostPerItem, productQty) values('" + textBox1.Text + "', '" + uc.TextBox1Value.ToString() + "', '" + uc.TextBox2Value.ToString() + "', '" + uc.TextBox3Value.ToString() + "', '" + uc.TextBox6Value.ToString() + "', '" + uc.TextBox8Value.ToString() + "') ";
-                command.ExecuteNonQuery();
-
-                command.CommandText = " INSERT INTO tblStocks(productImage, productCode, productName, productDescription, productType, productUnit, productCostPerItem, productExpDate, productQty) values('" + destFolder + "', '" + uc.TextBox1Value.ToString() + "', '" + uc.TextBox2Value.ToString() + "', '" + uc.TextBox3Value.ToString() + "', '" + uc.TextBox4Value.ToString() + "', '" + uc.TextBox5Value.ToString() + "', '" + uc.TextBox6Value.ToString() + "', '" + uc.TextBox7Value.ToString() + "', '" + uc.TextBox8Value.ToString() + "') ";
-                command.ExecuteNonQuery();
-
-                MessageBox.Show("Data Saved! ");
-            }
-            con.Close(); */
-
-            textBox4.Text = salesForm.overAll.ToString();
 
         }
 
         private void label11_Click(object sender, EventArgs e)
         {
-            if (float.Parse(textBox2.Text) > purchaseForm.overallTotal)
+            if (float.Parse(textBox2.Text) > salesForm.overAll)
             {
 
-                change = float.Parse(textBox2.Text) - purchaseForm.overallTotal;
+                change = float.Parse(textBox2.Text) - salesForm.overAll;
                 panel3.Visible = false;
                 panel2.Visible = true;
                 textBox6.Text = change.ToString();
@@ -102,7 +87,7 @@ namespace coposProject
             }
             else
             {
-                change = purchaseForm.overallTotal - float.Parse(textBox2.Text);
+                change = salesForm.overAll - float.Parse(textBox2.Text);
                 textBox7.Text = "Invalid Amount of Cash you are " + change +" less.";
             }
 
@@ -120,32 +105,29 @@ namespace coposProject
 
         public void addItems()
         {
-            /*
+            
             //Add Items to database
             con.Open();
             OleDbCommand command = new OleDbCommand();
             command.Connection = con;
 
-            foreach (userControl.purchaseOrderUc uc in purchaseForm.currentForm.flowLayoutPanel1.Controls)
+            foreach (ucSalesReceipt uc in salesForm.hereForm.flowLayoutPanel2.Controls)
             {
-                command.CommandText = " INSERT INTO tblPurchaseReceipt(referenceNo, productCode, productName, productDescription, productCostPerItem, productQty) values('" + textBox1.Text + "', '" + uc.TextBox1Value.ToString() + "', '" + uc.TextBox2Value.ToString() + "', '" + uc.TextBox3Value.ToString() + "', '" + uc.TextBox6Value.ToString() + "', '" + uc.TextBox8Value.ToString() + "') ";
-                command.ExecuteNonQuery();
+                //command.CommandText = " INSERT INTO tblPurchaseReceipt(referenceNo, productCode, productName, productDescription, productCostPerItem, productQty) values('" + textBox1.Text + "', '" + uc.TextBox1Value.ToString() + "', '" + uc.TextBox2Value.ToString() + "', '" + uc.TextBox3Value.ToString() + "', '" + uc.TextBox6Value.ToString() + "', '" + uc.TextBox8Value.ToString() + "') ";
+                //command.ExecuteNonQuery();
 
-                command.CommandText = " INSERT INTO tblStocks(productImage, productCode, productName, productDescription, productType, productUnit, productCostPerItem, productExpDate, productQty) values('" + destFolder + "', '" + uc.TextBox1Value.ToString() + "', '" + uc.TextBox2Value.ToString() + "', '" + uc.TextBox3Value.ToString() + "', '" + uc.TextBox4Value.ToString() + "', '" + uc.TextBox5Value.ToString() + "', '" + uc.TextBox6Value.ToString() + "', '" + uc.TextBox7Value.ToString() + "', '" + uc.TextBox8Value.ToString() + "') ";
-                command.ExecuteNonQuery();
-
-                MessageBox.Show("Data Saved! ");
+                //MessageBox.Show("Data Saved! ");
             }
 
-            command.CommandText = " INSERT INTO tblPurchaseTransaction(referenceID, employee, total, tax, cashAmount, change, purchaseDate) values('" + textBox1.Text + "', '" + textBox5.Text + "', '" + textBox4.Text + "', '" + textBox3.Text + "', '" + textBox2.Text + "', '" + textBox6.Text + "', '" + DateTime.Now.ToString("MMddyyyy") + "') ";
+            command.CommandText = " INSERT INTO tblPurchaseTransaction(referenceID, employee, total, tax, cashAmount, change, purchaseDate, type) values('" + textBox1.Text + "', '" + textBox5.Text + "', '" + textBox4.Text + "', '" + textBox3.Text + "', '" + textBox2.Text + "', '" + textBox6.Text + "', '" + DateTime.Now.ToString("MMddyyyy") + "', 'Sales') ";
             command.ExecuteNonQuery();
 
             con.Close();
             this.Close();
-            shadowBg.currentShadow.Close();
+            //shadowBg.currentShadow.Close();
 
             salesForm.hereForm.flowLayoutPanel2.Controls.Clear();
-             */
+             
 
             MessageBox.Show("Data Saved! ");
 

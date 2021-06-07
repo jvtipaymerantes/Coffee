@@ -20,47 +20,56 @@ namespace coposProject
             con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=coposDb.accdb";
         }
 
-        private void rectangleShape6_Click(object sender, EventArgs e)
+        private void lgn()
         {
             OleDbCommand cmd = new OleDbCommand();
             int i = 0;
 
-
-
-            try
+            if (textBox1.Text.Equals("") && textBox2.Text.Equals(""))
             {
-
-                if (textBox1.Text.Equals("") || textBox2.Text.Equals(""))
-                {
-                    MessageBox.Show("Please enter username and password");
-                }
-
-                cmd = new OleDbCommand("SELECT COUNT(*) FROM registration WHERE employeeID = '" + textBox1.Text + "' OR employeeUsername ='" + textBox1.Text + "' AND employeePassword ='" + textBox2.Text + "'", con);
-                if (con.State == ConnectionState.Closed)
-                {
-                    con.Open();
-                    i = (int)cmd.ExecuteScalar();
-                }
-                con.Close();
-
-                if (i > 0)
-                {
-                    mainForm mn = new mainForm();
-                    this.Hide();
-                    mn.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Invalid Username or Password");
-                }
-
-
+                rectangleShape3.BorderColor = Color.FromArgb(205, 97, 85);
+                rectangleShape4.BorderColor = Color.FromArgb(205, 97, 85);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.ToString());
+                try
+                {
 
+
+                    cmd = new OleDbCommand("SELECT COUNT(*) FROM registration WHERE employeeID = '" + textBox1.Text + "' OR employeeUsername ='" + textBox1.Text + "' AND employeePassword ='" + textBox2.Text + "'", con);
+                    if (con.State == ConnectionState.Closed)
+                    {
+                        con.Open();
+                        i = (int)cmd.ExecuteScalar();
+                    }
+                    con.Close();
+
+                    if (i > 0)
+                    {
+                        mainForm mn = new mainForm();
+                        this.Hide();
+                        mn.Show();
+                    }
+                    else
+                    {
+                        panel6.Visible = true;
+                        rectangleShape3.BorderColor = Color.FromArgb(205, 97, 85);
+                        rectangleShape4.BorderColor = Color.FromArgb(205, 97, 85);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+
+                }
             }
+
+        }
+
+        private void rectangleShape6_Click(object sender, EventArgs e)
+        {
+            lgn();
         }
 
         private void rectangleShape6_MouseHover(object sender, EventArgs e)
@@ -78,6 +87,58 @@ namespace coposProject
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                label5.Visible = false;
+                textBox1.Clear();
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                label5.Visible = true;
+            }
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "")
+            {
+                label6.Visible = false;
+                textBox2.Clear();
+            }
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "")
+            {
+                label6.Visible = true;
+            }
+        }
+
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+            pictureBox6.Visible = true;
+            pictureBox6.Location = new Point(290, 13);
+            textBox2.PasswordChar = '\0';
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            textBox2.PasswordChar = '*';
+            pictureBox6.Visible = false;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            lgn();
         }
         
     }

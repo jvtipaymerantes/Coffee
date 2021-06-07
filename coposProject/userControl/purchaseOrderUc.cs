@@ -22,7 +22,6 @@ namespace coposProject.userControl
 
         public string TextBox1Value
         {
-            
 
             get { return textBox2.Text; }
             set { textBox2.Text = value; }
@@ -76,6 +75,12 @@ namespace coposProject.userControl
             set { textBox9.Text = value; }
         }
 
+        public string TextBox10Value
+        {
+            get { return textBox10.Text; }
+            set { textBox10.Text = value; }
+        }
+
         public string imageLoc
         {
             get { return label1.Text; }
@@ -94,13 +99,8 @@ namespace coposProject.userControl
             textBox7.Text = purchaseForm.productExpDate;
             textBox8.Text = purchaseForm.productQuantity;
             textBox9.Text = purchaseForm.productTotal.ToString();
+            textBox10.Text = purchaseForm.productSellingPrice;
 
-        }
-
-        private void purchaseOrderUc_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBox1.Visible = false;
-            pictureBox2.Visible = false;
         }
 
         private void rectangleShape1_MouseHover(object sender, EventArgs e)
@@ -111,21 +111,18 @@ namespace coposProject.userControl
 
         private void rectangleShape1_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox1.Visible = true;
-            pictureBox2.Visible = true;
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = false;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             //purchaseForm.flowLayoutPanel1.Controls.Remove(foundControl);
             //purchaseForm a = new purchaseForm();
-            this.Parent.Controls.Remove(this);
-        }
 
-        private void purchaseOrderUc_MouseHover(object sender, EventArgs e)
-        {
-            pictureBox1.Visible = true;
-            pictureBox2.Visible = true;
+            purchaseForm.overallTotal -= float.Parse(textBox9.Text);
+
+            this.Parent.Controls.Remove(this);
         }
 
         

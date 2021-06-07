@@ -83,8 +83,6 @@ namespace coposProject
             a.Show();
         }
 
-
-
         private void salesForm_Load(object sender, EventArgs e)
         {
             hereForm = this;
@@ -103,14 +101,13 @@ namespace coposProject
                 prImage = myReader["productImage"].ToString();
                 prCode = myReader["productCode"].ToString();
                 prName = myReader["productName"].ToString();
-                prCost = myReader["productCostPerItem"].ToString();
+                prCost = myReader["productSellingPrice"].ToString();
 
                 ucSales uc = new ucSales();
                 flowLayoutPanel1.Controls.Add(uc);
             }
 
             con.Close();
-
 
         }
 
@@ -122,7 +119,9 @@ namespace coposProject
 
         private void rectangleShape11_Click(object sender, EventArgs e)
         {
-            
+
+            overAll = 0;
+
             con.Open();
 
             OleDbCommand command = new OleDbCommand();
@@ -132,8 +131,6 @@ namespace coposProject
             {
                 overAll += float.Parse(uc.itemPrice);
             }
-
-            MessageBox.Show(overAll.ToString() );
 
             con.Close();
 
@@ -164,6 +161,18 @@ namespace coposProject
         {
             label2.Text = DateTime.Now.ToLongTimeString();
             label15.Text = DateTime.Now.ToLongDateString();
+
+            StringBuilder sbTotal = new StringBuilder();
+            sbTotal.Append("PAYOUT(");
+            sbTotal.Append(overAll);
+            sbTotal.Append(")");
+            label10.Text = sbTotal.ToString();
+
+            //foreach (ucSalesReceipt uc in flowLayoutPanel2.Controls)
+            //{
+            //    overAll = overAll + float.Parse(uc.itemPrice);
+            //}
+
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -248,6 +257,16 @@ namespace coposProject
             con.Close();
         }
 
+        private void flowLayoutPanel2_ControlAdded(object sender, ControlEventArgs e)
+        {
+            overAll += float.Parse(ucSalesReceipt.a.itemPrice);
+        }
+
+        public string labelText
+        {
+            get { return label1.Text; }
+            set { label1.Text = value; }
+        }
 
     }
 }

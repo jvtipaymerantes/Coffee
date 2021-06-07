@@ -154,7 +154,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.shapeContainer1);
-            this.Margin = new System.Windows.Forms.Padding(16, 10, 10, 10);
+            this.Margin = new System.Windows.Forms.Padding(10);
             this.Name = "ucSales";
             this.Size = new System.Drawing.Size(189, 243);
             this.Load += new System.EventHandler(this.ucSales_Load);

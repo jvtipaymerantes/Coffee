@@ -15,6 +15,7 @@ namespace coposProject
     public partial class purchasePaymentForm : Form
     {
         public static float change;
+
         private OleDbConnection con = new OleDbConnection();
 
         
@@ -79,6 +80,7 @@ namespace coposProject
             {
 
                 change = float.Parse(textBox2.Text) - purchaseForm.overallTotal;
+
                 panel3.Visible = false;
                 panel2.Visible = true;
                 textBox6.Text = change.ToString();
@@ -122,7 +124,7 @@ namespace coposProject
                 // Destination Folder kung san ilalagay yung Image (bin\Debug\image) + image file name
                 string destFolder = Path.Combine("image/", fileName);
 
-                command.CommandText = " INSERT INTO tblStocks(productImage, productCode, productName, productDescription, productType, productUnit, productCostPerItem, productExpDate, productQty) values('" + destFolder + "', '" + uc.TextBox1Value.ToString() + "', '" + uc.TextBox2Value.ToString() + "', '" + uc.TextBox3Value.ToString() + "', '" + uc.TextBox4Value.ToString() + "', '" + uc.TextBox5Value.ToString() + "', '" + uc.TextBox6Value.ToString() + "', '" + uc.TextBox7Value.ToString() + "', '" + uc.TextBox8Value.ToString() + "') ";
+                command.CommandText = " INSERT INTO tblStocks(productImage, productCode, productName, productDescription, productType, productUnit, productSellingPrice,productCostPerItem, productExpDate, productQty) values('" + destFolder + "', '" + uc.TextBox1Value.ToString() + "', '" + uc.TextBox2Value.ToString() + "', '" + uc.TextBox3Value.ToString() + "', '" + uc.TextBox4Value.ToString() + "', '" + uc.TextBox5Value.ToString() + "', '" + uc.TextBox10Value.ToString() +"' ,'" + uc.TextBox6Value.ToString() + "', '" + uc.TextBox7Value.ToString() + "', '" + uc.TextBox8Value.ToString() + "') ";
                 command.ExecuteNonQuery();
 
                 // Copy Image
@@ -131,7 +133,7 @@ namespace coposProject
                 MessageBox.Show("Data Saved! " + destFolder.ToString());
             }
 
-            command.CommandText = " INSERT INTO tblPurchaseTransaction(referenceID, employee, total, tax, cashAmount, change, purchaseDate) values('" + textBox1.Text + "', '" + textBox5.Text + "', '" + textBox4.Text + "', '" + textBox3.Text + "', '" + textBox2.Text + "', '" + textBox6.Text + "', '" + DateTime.Now.ToString("MMddyyyy") + "') ";
+            command.CommandText = " INSERT INTO tblPurchaseTransaction(referenceID, employee, total, tax, cashAmount, change, purchaseDate, type) values('" + textBox1.Text + "', '" + textBox5.Text + "', '" + textBox4.Text + "', '" + textBox3.Text + "', '" + textBox2.Text + "', '" + textBox6.Text + "', '" + DateTime.Now.ToString("MMddyyyy") + "', 'Purchase') ";
             command.ExecuteNonQuery();
 
             con.Close();

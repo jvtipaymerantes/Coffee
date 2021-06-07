@@ -15,9 +15,11 @@ namespace coposProject
 
         private OleDbConnection con = new OleDbConnection();
 
-        public static int qty = 1;
+        private int qty = 1;
         public static float itemPerCost;
         public static float origCost;
+
+        public static ucSalesReceipt a = null;
 
         public ucSalesReceipt()
         {
@@ -27,6 +29,10 @@ namespace coposProject
 
         private void ucSalesReceipt_Load(object sender, EventArgs e)
         {
+
+            a = this;
+            qty = 1;
+
             label3.Text = ucSales.productCodeSales;
 
             con.Open();
@@ -57,6 +63,7 @@ namespace coposProject
 
             textBox2.Text = itemPerCost.ToString();
             textBox3.Text = qty.ToString();
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -69,7 +76,9 @@ namespace coposProject
 
                 textBox2.Text = itemPerCost.ToString();
                 textBox3.Text = qty.ToString();
+
             }
+
         }
 
         public string itemPrice

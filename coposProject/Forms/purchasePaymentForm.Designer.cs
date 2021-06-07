@@ -53,6 +53,7 @@
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -107,7 +108,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(32, 270);
+            this.label5.Location = new System.Drawing.Point(32, 258);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(118, 16);
             this.label5.TabIndex = 5;
@@ -118,7 +119,7 @@
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(174, 267);
+            this.textBox2.Location = new System.Drawing.Point(172, 253);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(132, 21);
             this.textBox2.TabIndex = 8;
@@ -147,7 +148,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(32, 232);
+            this.label9.Location = new System.Drawing.Point(32, 227);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(37, 16);
             this.label9.TabIndex = 12;
@@ -223,11 +224,11 @@
             // 
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(174, 233);
+            this.textBox3.Location = new System.Drawing.Point(174, 228);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(130, 14);
+            this.textBox3.Size = new System.Drawing.Size(110, 14);
             this.textBox3.TabIndex = 17;
-            this.textBox3.Text = "12%";
+            this.textBox3.Text = "12";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // panel2
@@ -235,9 +236,9 @@
             this.panel2.Controls.Add(this.textBox6);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.panel1);
-            this.panel2.Location = new System.Drawing.Point(12, 295);
+            this.panel2.Location = new System.Drawing.Point(12, 294);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(318, 55);
+            this.panel2.Size = new System.Drawing.Size(318, 51);
             this.panel2.TabIndex = 18;
             this.panel2.Visible = false;
             // 
@@ -275,7 +276,7 @@
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.ForeColor = System.Drawing.Color.Red;
-            this.textBox7.Location = new System.Drawing.Point(12, 357);
+            this.textBox7.Location = new System.Drawing.Point(10, 355);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(318, 15);
             this.textBox7.TabIndex = 21;
@@ -330,12 +331,24 @@
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label8.Location = new System.Drawing.Point(286, 228);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(18, 15);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "%";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // purchasePaymentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(333, 441);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.textBox7);
@@ -394,5 +407,6 @@
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label8;
     }
 }
