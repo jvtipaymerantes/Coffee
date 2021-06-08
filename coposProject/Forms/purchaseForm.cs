@@ -449,7 +449,7 @@ namespace coposProject
 
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            if (!char.IsNumber(e.KeyChar) && !char.IsPunctuation(e.KeyChar) && (e.KeyChar != (char)Keys.Back) )
             {
                 e.Handled = true;
             }
@@ -512,6 +512,11 @@ namespace coposProject
 
             shadowBg bg = new shadowBg();
             bg.Show();
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+           
         }
 
 

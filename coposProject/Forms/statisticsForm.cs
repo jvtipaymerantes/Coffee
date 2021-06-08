@@ -116,7 +116,7 @@ namespace coposProject
             catch (Exception ex)
             {
                 MessageBox.Show("Error " + ex);
-            } 
+            }
 
 
 
@@ -125,7 +125,7 @@ namespace coposProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
 
 
 
@@ -184,6 +184,11 @@ namespace coposProject
             {
                 MessageBox.Show("Error " + ex);
             }
+            
+            
+
+
+
             try
             {
                 con.Open();
@@ -195,7 +200,7 @@ namespace coposProject
                 OleDbDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    chart3.Series["Gross Income"].Points.AddXY(reader["total"].ToString(), reader["cashAmount"].ToString());
+                    chart4.Series["stats"].Points.AddXY(reader["total"].ToString(), reader["cashAmount"].ToString());
 
                 }
 
@@ -209,13 +214,9 @@ namespace coposProject
 
 
 
+
+
+
         }
-
-
-
-
-
-
-       
     }
 }
