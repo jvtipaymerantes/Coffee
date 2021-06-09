@@ -40,7 +40,10 @@ namespace coposProject
 
         private void rectangleShape1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            var accounts = new accounts();
+            accounts.Closed += (s, args) => this.Close();
+            accounts.Show();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -53,6 +56,16 @@ namespace coposProject
             label9.Text = DateTime.Now.ToShortTimeString();
             label12.Text = DateTime.Now.ToShortDateString();
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var accounts = new accounts();
+            accounts.Closed += (s, args) => this.Close();
+            accounts.Show();
+        }
+
+
 
 
     }

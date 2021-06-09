@@ -16,6 +16,9 @@ namespace coposProject
 
         public static string q1;
         public static string q2;
+        public static string a1;
+        public static string a2;
+        public static string username;
 
         public forgotpasswordForm()
         {
@@ -29,8 +32,9 @@ namespace coposProject
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public void label1_Click(object sender, EventArgs e)
         {
+
             if (panel1.Visible == false)
             {
                 con.Open();
@@ -45,6 +49,8 @@ namespace coposProject
                 {
                     q1 = myReader["question1"].ToString();
                     q2 = myReader["question2"].ToString();
+                    a1 = myReader["question1Ans"].ToString();
+                    a2 = myReader["question2Ans"].ToString();
 
                 }
                 
@@ -54,12 +60,35 @@ namespace coposProject
 
                 con.Close();
             }
+
+            else if (txtboxquest1.Text == a1.ToString())
+            {
+
+                username = txtboxusern.Text;
+                this.Hide();
+                var forgotpasswordFormTwo = new forgotpasswordFormTwo();
+                forgotpasswordFormTwo.Closed += (s, args) => this.Close();
+                forgotpasswordFormTwo.Show();
+
+
+            }
         }
 
         private void rectangleShape1_Click(object sender, EventArgs e)
         {
 
         }
+
+        public void txtboxusern_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+
 
 
     }

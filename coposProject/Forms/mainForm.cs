@@ -97,6 +97,11 @@ namespace coposProject
             timer1.Start();
         }
 
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
       
 
             

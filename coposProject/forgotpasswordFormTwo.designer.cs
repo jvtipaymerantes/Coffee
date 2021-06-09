@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(forgotpasswordFormTwo));
             this.label4 = new System.Windows.Forms.Label();
-            this.txtboxusern = new System.Windows.Forms.TextBox();
+            this.txtboxconfirm1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtboxconfirm2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,12 +50,12 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "ENTER NEW PASSWORD";
             // 
-            // txtboxusern
+            // txtboxconfirm1
             // 
-            this.txtboxusern.Location = new System.Drawing.Point(422, 168);
-            this.txtboxusern.Name = "txtboxusern";
-            this.txtboxusern.Size = new System.Drawing.Size(226, 20);
-            this.txtboxusern.TabIndex = 14;
+            this.txtboxconfirm1.Location = new System.Drawing.Point(422, 168);
+            this.txtboxconfirm1.Name = "txtboxconfirm1";
+            this.txtboxconfirm1.Size = new System.Drawing.Size(226, 20);
+            this.txtboxconfirm1.TabIndex = 14;
             // 
             // label1
             // 
@@ -112,12 +112,12 @@
             this.label2.TabIndex = 32;
             this.label2.Text = "VERIFY PASSWORD";
             // 
-            // textBox1
+            // txtboxconfirm2
             // 
-            this.textBox1.Location = new System.Drawing.Point(422, 237);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(226, 20);
-            this.textBox1.TabIndex = 31;
+            this.txtboxconfirm2.Location = new System.Drawing.Point(422, 237);
+            this.txtboxconfirm2.Name = "txtboxconfirm2";
+            this.txtboxconfirm2.Size = new System.Drawing.Size(226, 20);
+            this.txtboxconfirm2.TabIndex = 31;
             // 
             // forgotpasswordFormTwo
             // 
@@ -126,9 +126,9 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(826, 425);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtboxconfirm2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtboxusern);
+            this.Controls.Add(this.txtboxconfirm1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.shapeContainer1);
@@ -145,12 +145,12 @@
         #endregion
 
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtboxusern;
+        private System.Windows.Forms.TextBox txtboxconfirm1;
         private System.Windows.Forms.Label label1;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtboxconfirm2;
     }
 }

@@ -40,8 +40,8 @@
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +62,7 @@
             this.txtboxusern.Name = "txtboxusern";
             this.txtboxusern.Size = new System.Drawing.Size(226, 20);
             this.txtboxusern.TabIndex = 14;
+            this.txtboxusern.TextChanged += new System.EventHandler(this.txtboxusern_TextChanged);
             // 
             // label1
             // 
@@ -158,19 +159,19 @@
             this.panel1.TabIndex = 31;
             this.panel1.Visible = false;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(3, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(398, 20);
-            this.textBox1.TabIndex = 29;
-            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(3, 142);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(398, 20);
             this.textBox2.TabIndex = 30;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(3, 36);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(398, 20);
+            this.textBox1.TabIndex = 29;
             // 
             // forgotpasswordForm
             // 
