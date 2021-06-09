@@ -113,13 +113,13 @@ namespace coposProject
 
             foreach (ucSalesReceipt uc in salesForm.hereForm.flowLayoutPanel2.Controls)
             {
-                //command.CommandText = " INSERT INTO tblPurchaseReceipt(referenceNo, productCode, productName, productDescription, productCostPerItem, productQty) values('" + textBox1.Text + "', '" + uc.TextBox1Value.ToString() + "', '" + uc.TextBox2Value.ToString() + "', '" + uc.TextBox3Value.ToString() + "', '" + uc.TextBox6Value.ToString() + "', '" + uc.TextBox8Value.ToString() + "') ";
-                //command.ExecuteNonQuery();
+                command.CommandText = " INSERT INTO tblPurchaseReceipt(referenceNo, productCode, productName, productDescription, productCostPerItem, productQty, type) values('" + textBox1.Text + "', '" + uc.code.ToString() + "', '" + uc.name.ToString() + "', '" + uc.des.ToString() + "', '" + uc.sPrice.ToString() + "', '" + uc.qtyy.ToString() + "', 'Sales') ";
+                command.ExecuteNonQuery();
 
-                //MessageBox.Show("Data Saved! ");
+                MessageBox.Show("Data Saved! ");
             }
 
-            command.CommandText = " INSERT INTO tblPurchaseTransaction(referenceID, employee, total, tax, cashAmount, change, purchaseDate, type) values('" + textBox1.Text + "', '" + textBox5.Text + "', '" + textBox4.Text + "', '" + textBox3.Text + "', '" + textBox2.Text + "', '" + textBox6.Text + "', '" + DateTime.Now.ToString("MMddyyyy") + "', 'Sales') ";
+            command.CommandText = " INSERT INTO tblPurchaseTransaction(referenceID, employee, total, tax, cashAmount, change, purchaseDate, type) values('" + textBox1.Text + "', '" + textBox5.Text + "', '" + textBox4.Text + "', '" + textBox3.Text + "', '" + textBox2.Text + "', '" + textBox6.Text + "', '" + DateTime.Now.ToString("MM" + "/" + "dd" + "/" + "yyyy" + "PO") + "', 'Sales') ";
             command.ExecuteNonQuery();
 
             con.Close();

@@ -10,17 +10,17 @@ using System.Data.OleDb;
 
 namespace coposProject
 {
-    public partial class registerForm : Form
+    public partial class forgotpasswordFormTwo : Form
     {
         private OleDbConnection con = new OleDbConnection();
 
-        public registerForm()
+        public forgotpasswordFormTwo()
         {
             InitializeComponent();
             con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=coposDb.accdb";
         }
 
-        private void registerForm_Load(object sender, EventArgs e)
+        private void forgotpasswordFormTwo_Load(object sender, EventArgs e)
         {
            
 
@@ -31,7 +31,7 @@ namespace coposProject
             OleDbCommand cmd = con.CreateCommand();
             con.Open();
             //cmd.CommandText = "Insert into registration(employeeID,employee_name,position,username,password,question1,question2) Values('" + txtboxid.Text + "', '" + txtboxname.Text + "', '" + cboxposition.Text + "', '" + txtboxusern.Text + "', '" + txtboxpass.Text + "', '"  + txtboxquest1.Text + "', '" + txtboxquest2.Text + "') ";
-            cmd.CommandText = " INSERT INTO registration(employeeID, employeeName, employeePosition, employeeUsername, employeePassword, question1Ans, question2Ans, question1, question2) values('" + txtboxid.Text + "' , '" + txtboxname.Text + "', '" + cboxposition.Text.ToString() + "','" + txtboxusern.Text + "','" + txtboxpass.Text + "', '" + txtboxquest1.Text + "', '" + txtboxquest2.Text + "', '"+ comboBox2.Text +"', '"+ comboBox1.Text +"') "; 
+            cmd.CommandText = " INSERT INTO registration(employeeID, employeeName, employeePosition, employeeUsername, employeePassword, question1, question2) values('" + txtboxid.Text + "' , '" + txtboxname.Text + "', '" + cboxposition.Text.ToString() + "','" + txtboxusern.Text + "','" + txtboxpass.Text + "', '" + txtboxquest1.Text + "', '" + txtboxquest2.Text + "') "; 
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             MessageBox.Show("Record Submitted", "Congrats");

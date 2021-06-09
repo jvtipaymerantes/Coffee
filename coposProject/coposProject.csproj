@@ -67,6 +67,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="forgotpasswordFormTwo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forgotpasswordFormTwo.designer.cs">
+      <DependentUpon>forgotpasswordFormTwo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\forgotpasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\forgotpasswordForm.designer.cs">
+      <DependentUpon>forgotpasswordForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\accounts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +219,12 @@
     <Compile Include="userControl\purchaseOrderUc.Designer.cs">
       <DependentUpon>purchaseOrderUc.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="forgotpasswordFormTwo.resx">
+      <DependentUpon>forgotpasswordFormTwo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\forgotpasswordForm.resx">
+      <DependentUpon>forgotpasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\accounts.resx">
       <DependentUpon>accounts.cs</DependentUpon>
     </EmbeddedResource>

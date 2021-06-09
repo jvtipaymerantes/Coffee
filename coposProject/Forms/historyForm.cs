@@ -47,13 +47,60 @@ namespace coposProject
                 code = myReader["productCode"].ToString();
                 product = myReader["productName"].ToString();
 
-                MessageBox.Show(id + " " + name + " " + code + " " + product);
+            }
+
+            con.Close();
+
+            receipt();
+
+        }
+
+        public void receipt()
+        {
+
+            txtResult.Clear();
+            txtResult.Text += "***************************************\n";
+            txtResult.Text += "**       CoPos Coffee Shop            **\n";
+            txtResult.Text += "**       Congressional Road Caloocan City            **\n";
+            txtResult.Text += "***************************************\n";
+            txtResult.Text += "***************************************\n";
+            txtResult.Text += "**                Receipt                  **\n";
+            txtResult.Text += "***************************************\n";
+            
+
+            con.Open();
+
+            OleDbCommand cmd = con.CreateCommand();
+            cmd.Connection = con;
+            string query = "select tblPurchaseTransaction.purchaseDate, tblPurchaseReceipt.productName, tblPurchaseReceipt.productQty, tblPurchaseReceipt.productCostPerItem from tblPurchaseTransaction inner join tblPurchaseReceipt ";
+            query += "on tblPurchaseTransaction.referenceID = tblPurchaseReceipt.referenceNo where tblPurchaseTransaction.referenceID = '" + textBox1.Text + "' ";
+            cmd.CommandText = query;
+            OleDbDataReader myReader = cmd.ExecuteReader();
+
+            myReader.Read();
+            txtResult.Text += "Date: " + myReader["purchaseDate"].ToString() + "\n";
+            txtResult.Text += "***************************************\n";
+
+            while (myReader.Read())
+            {
+
+                txtResult.Text += "Item: " + myReader["productName"].ToString() +" \n";
+                txtResult.Text += "Qty: " + myReader["productQty"].ToString() + " \n";
+                txtResult.Text += "Price: " + myReader["productCostPerItem"].ToString() + " \n";
+
+                //id = myReader["referenceID"].ToString();
+                //name = myReader["employee"].ToString();
+                //code = myReader["productCode"].ToString();
+                //product = myReader["productName"].ToString();
+
+                //MessageBox.Show(id + " " + name + " " + code + " " + product);
 
             }
 
             con.Close();
 
+
         }
 
-    }
+    }// End of Class
 }

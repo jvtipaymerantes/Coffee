@@ -15,7 +15,7 @@ namespace coposProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new statisticsForm ());
+            Application.Run(new forgotpasswordForm());
         }
     }
 }

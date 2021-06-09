@@ -70,7 +70,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -118,7 +117,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1305, 65);
+            this.panel1.Size = new System.Drawing.Size(1380, 65);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -138,7 +137,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.pictureBox11);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(786, 0);
+            this.panel2.Location = new System.Drawing.Point(861, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(322, 65);
             this.panel2.TabIndex = 7;
@@ -169,7 +168,7 @@
             this.panel8.Controls.Add(this.pictureBox10);
             this.panel8.Controls.Add(this.label1);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(1108, 0);
+            this.panel8.Location = new System.Drawing.Point(1183, 0);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(197, 65);
             this.panel8.TabIndex = 3;
@@ -232,7 +231,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 65);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1305, 6);
+            this.panel3.Size = new System.Drawing.Size(1380, 6);
             this.panel3.TabIndex = 1;
             // 
             // panel4
@@ -250,7 +249,7 @@
             this.panel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
             this.panel4.Location = new System.Drawing.Point(0, 71);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(163, 608);
+            this.panel4.Size = new System.Drawing.Size(163, 662);
             this.panel4.TabIndex = 2;
             // 
             // panel12
@@ -539,25 +538,14 @@
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.button1);
             this.panel11.Controls.Add(this.panel10);
             this.panel11.Controls.Add(this.flowLayoutPanel1);
             this.panel11.Controls.Add(this.shapeContainer2);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(163, 71);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1142, 608);
+            this.panel11.Size = new System.Drawing.Size(1217, 662);
             this.panel11.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1110, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel10
             // 
@@ -566,7 +554,7 @@
             this.panel10.Controls.Add(this.label13);
             this.panel10.Controls.Add(this.label12);
             this.panel10.Controls.Add(this.label11);
-            this.panel10.Location = new System.Drawing.Point(36, 76);
+            this.panel10.Location = new System.Drawing.Point(36, 45);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(1149, 30);
             this.panel10.TabIndex = 1;
@@ -620,12 +608,11 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(36, 112);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(36, 81);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(16, 10, 10, 10);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1149, 518);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1149, 549);
             this.flowLayoutPanel1.TabIndex = 0;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // shapeContainer2
             // 
@@ -634,7 +621,7 @@
             this.shapeContainer2.Name = "shapeContainer2";
             this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.rectangleShape1});
-            this.shapeContainer2.Size = new System.Drawing.Size(1142, 608);
+            this.shapeContainer2.Size = new System.Drawing.Size(1217, 662);
             this.shapeContainer2.TabIndex = 3;
             this.shapeContainer2.TabStop = false;
             // 
@@ -644,9 +631,9 @@
             this.rectangleShape1.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.rectangleShape1.BorderColor = System.Drawing.Color.White;
             this.rectangleShape1.CornerRadius = 7;
-            this.rectangleShape1.Location = new System.Drawing.Point(29, 68);
+            this.rectangleShape1.Location = new System.Drawing.Point(29, 36);
             this.rectangleShape1.Name = "rectangleShape1";
-            this.rectangleShape1.Size = new System.Drawing.Size(1162, 567);
+            this.rectangleShape1.Size = new System.Drawing.Size(1162, 599);
             // 
             // timer1
             // 
@@ -658,7 +645,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(1305, 679);
+            this.ClientSize = new System.Drawing.Size(1380, 733);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -757,7 +744,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button1;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
         private System.Windows.Forms.Panel panel12;

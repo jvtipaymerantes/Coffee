@@ -116,7 +116,7 @@ namespace coposProject
 
             foreach (userControl.purchaseOrderUc uc in purchaseForm.currentForm.flowLayoutPanel1.Controls)
             {
-                command.CommandText = " INSERT INTO tblPurchaseReceipt(referenceNo, productCode, productName, productDescription, productCostPerItem, productQty) values('" + textBox1.Text + "', '" + uc.TextBox1Value.ToString() + "', '" + uc.TextBox2Value.ToString() + "', '" + uc.TextBox3Value.ToString() + "', '" + uc.TextBox6Value.ToString() + "', '" + uc.TextBox8Value.ToString() + "') ";
+                command.CommandText = " INSERT INTO tblPurchaseReceipt(referenceNo, productCode, productName, productDescription, productCostPerItem, productQty, type) values('" + textBox1.Text + "', '" + uc.TextBox1Value.ToString() + "', '" + uc.TextBox2Value.ToString() + "', '" + uc.TextBox3Value.ToString() + "', '" + uc.TextBox6Value.ToString() + "', '" + uc.TextBox8Value.ToString() + "', 'Purchase') ";
                 command.ExecuteNonQuery();
 
                 // To Create Random Filename
@@ -133,7 +133,7 @@ namespace coposProject
                 MessageBox.Show("Data Saved! " + destFolder.ToString());
             }
 
-            command.CommandText = " INSERT INTO tblPurchaseTransaction(referenceID, employee, total, tax, cashAmount, change, purchaseDate, type) values('" + textBox1.Text + "', '" + textBox5.Text + "', '" + textBox4.Text + "', '" + textBox3.Text + "', '" + textBox2.Text + "', '" + textBox6.Text + "', '" + DateTime.Now.ToString("MMddyyyy") + "', 'Purchase') ";
+            command.CommandText = " INSERT INTO tblPurchaseTransaction(referenceID, employee, total, tax, cashAmount, change, purchaseDate, type) values('" + textBox1.Text + "', '" + textBox5.Text + "', '" + textBox4.Text + "', '" + textBox3.Text + "', '" + textBox2.Text + "', '" + textBox6.Text + "', '" + DateTime.Now.ToString("MM" + "/" + "dd" + "/" + "yyyy" + "PO") + "', 'Purchase') ";
             command.ExecuteNonQuery();
 
             con.Close();

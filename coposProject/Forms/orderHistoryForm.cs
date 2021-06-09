@@ -134,11 +134,6 @@ namespace coposProject
             timer1.Start();
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
 
 
     }
