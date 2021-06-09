@@ -93,49 +93,6 @@ namespace coposProject
             label12.Text = DateTime.Now.ToLongDateString();
         }
 
-        private void showBtn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                con.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = con;
-                string query = "select * from purchasedItem";
-                command.CommandText = query;
-
-                OleDbDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    chart1.Series["Purchases"].Points.AddXY(reader["purchaseOrder"].ToString(), reader["stockPerItem"].ToString());
-
-                }
-
-                con.Close();
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error " + ex);
-            }
-
-
-
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-
-
-
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void statisticsForm_Load(object sender, EventArgs e)
         {
@@ -173,8 +130,7 @@ namespace coposProject
                 OleDbDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    chart1.Series["Net Income"].Points.AddXY(reader["total"].ToString(), reader["cashAmount"].ToString());
-
+                    chart1.Series["Net Income"].Points.AddXY(reader["referenceID"].ToString(), reader["total"].ToString());
                 }
 
                 con.Close();
@@ -194,13 +150,13 @@ namespace coposProject
                 con.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = con;
-                string query = "select * from tblPurchaseTransaction";
+                string query = "select * from tblStatus";
                 command.CommandText = query;
 
                 OleDbDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    chart4.Series["stats"].Points.AddXY(reader["total"].ToString(), reader["cashAmount"].ToString());
+                    chart4.Series["stats"].Points.AddXY(reader["income_month"].ToString(), reader["income_total"].ToString());
 
                 }
 
@@ -218,5 +174,7 @@ namespace coposProject
 
 
         }
+
+
     }
 }

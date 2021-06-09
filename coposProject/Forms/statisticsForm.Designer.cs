@@ -33,13 +33,13 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -80,12 +80,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label16 = new System.Windows.Forms.Label();
-            this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label14 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -112,9 +113,10 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -585,12 +587,12 @@
             // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.flowLayoutPanel1);
             this.panel11.Controls.Add(this.label16);
-            this.panel11.Controls.Add(this.chart4);
-            this.panel11.Controls.Add(this.label14);
             this.panel11.Controls.Add(this.label13);
             this.panel11.Controls.Add(this.chart2);
-            this.panel11.Controls.Add(this.chart1);
+            this.panel11.Controls.Add(this.chart4);
+            this.panel11.Controls.Add(this.label14);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(244, 109);
             this.panel11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -598,57 +600,57 @@
             this.panel11.Size = new System.Drawing.Size(1696, 957);
             this.panel11.TabIndex = 3;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Controls.Add(this.chart1);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(35, 48);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(340, 210);
+            this.flowLayoutPanel1.TabIndex = 10;
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "sample";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(3, 3);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
+            series1.Legend = "sample";
+            series1.MarkerBorderWidth = 10;
+            series1.Name = "Net Income";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(1086, 332);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart";
+            title1.Name = "sample";
+            this.chart1.Titles.Add(title1);
+            // 
             // label16
             // 
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(614, 733);
+            this.label16.Location = new System.Drawing.Point(279, 605);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(225, 49);
             this.label16.TabIndex = 9;
             this.label16.Text = "RATING";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // chart4
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart4.Legends.Add(legend1);
-            this.chart4.Location = new System.Drawing.Point(398, 430);
-            this.chart4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.chart4.Name = "chart4";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "stats";
-            this.chart4.Series.Add(series1);
-            this.chart4.Size = new System.Drawing.Size(700, 298);
-            this.chart4.TabIndex = 8;
-            this.chart4.Text = "chart4";
-            // 
-            // label14
-            // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(1016, 381);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(225, 49);
-            this.label14.TabIndex = 5;
-            this.label14.Text = "STOCKS";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label13
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(242, 381);
+            this.label13.Location = new System.Drawing.Point(345, 12);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(225, 49);
             this.label13.TabIndex = 4;
             this.label13.Text = "NET INCOME";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // chart2
             // 
@@ -656,7 +658,7 @@
             this.chart2.ChartAreas.Add(chartArea2);
             legend2.Name = "Purchases";
             this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(800, 86);
+            this.chart2.Location = new System.Drawing.Point(800, 645);
             this.chart2.Name = "chart2";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -665,30 +667,38 @@
             series2.MarkerBorderWidth = 10;
             series2.Name = "Stocks";
             this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(700, 283);
+            this.chart2.Size = new System.Drawing.Size(703, 298);
             this.chart2.TabIndex = 2;
             this.chart2.Text = "chart";
             // 
-            // chart1
+            // chart4
             // 
             chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "sample";
-            this.chart1.Legends.Add(legend3);
-            this.chart1.Location = new System.Drawing.Point(48, 86);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
+            this.chart4.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart4.Legends.Add(legend3);
+            this.chart4.Location = new System.Drawing.Point(77, 645);
+            this.chart4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chart4.Name = "chart4";
             series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "sample";
-            series3.MarkerBorderWidth = 10;
-            series3.Name = "Net Income";
-            this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(680, 283);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart";
-            title1.Name = "sample";
-            this.chart1.Titles.Add(title1);
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Legend = "Legend1";
+            series3.Name = "stats";
+            this.chart4.Series.Add(series3);
+            this.chart4.Size = new System.Drawing.Size(647, 298);
+            this.chart4.TabIndex = 8;
+            this.chart4.Text = "chart4";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(1028, 618);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(225, 49);
+            this.label14.TabIndex = 5;
+            this.label14.Text = "STOCKS";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // timer1
             // 
@@ -750,9 +760,10 @@
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -806,6 +817,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
 
 
 
