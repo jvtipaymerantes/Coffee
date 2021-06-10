@@ -68,7 +68,6 @@ namespace coposProject
             textBox1.Text = rf.ToString();
 
             purchaseForm a = new purchaseForm();
-            textBox5.Text = a.LabelText;
 
             textBox4.Text = purchaseForm.overallTotal.ToString();
 

@@ -91,7 +91,7 @@ namespace coposProject
 
             OleDbCommand cmd = con.CreateCommand();
             cmd.Connection = con;
-            string query = "select * from tblStocks";
+            string query = "select * from tblStocks where productQty > '0' ";
             cmd.CommandText = query;
             OleDbDataReader myReader = cmd.ExecuteReader();
 
@@ -260,12 +260,6 @@ namespace coposProject
         private void flowLayoutPanel2_ControlAdded(object sender, ControlEventArgs e)
         {
             overAll += float.Parse(ucSalesReceipt.a.itemPrice);
-        }
-
-        public string labelText
-        {
-            get { return label1.Text; }
-            set { label1.Text = value; }
         }
 
     }

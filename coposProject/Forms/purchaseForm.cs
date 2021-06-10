@@ -349,18 +349,6 @@ namespace coposProject
 
         }
 
-        public string LabelText
-        {
-            get
-            {
-                return this.label1.Text;
-            }
-            set
-            {
-                this.label1.Text = value;
-            }
-        }
-
         public void insertData(){
             //Validation ( ALL Picture Box / Text Box Must Have Value
             if (!(textBox6.Text.Equals("")) && !(textBox1.Text.Equals("")) && !(textBox2.Text.Equals("")) && !(textBox3.Text.Equals("")) && !(comboBox1.Text.Equals("UNIT")) && !(textBox5.Text.Equals("")) && !(comboBox2.Text.Equals("MONTH")) && !(comboBox3.Text.Equals("DAY")) && !(comboBox4.Text.Equals("YEAR")) && !(textBox4.Text.Equals("")) && !(pictureBox19.ImageLocation == null) )

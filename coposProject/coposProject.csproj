@@ -67,10 +67,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="forgotpasswordFormTwo.cs">
+    <Compile Include="Forms\forgotpasswordFormTwo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forgotpasswordFormTwo.designer.cs">
+    <Compile Include="Forms\forgotpasswordFormTwo.designer.cs">
       <DependentUpon>forgotpasswordFormTwo.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\forgotpasswordForm.cs">
@@ -219,7 +219,7 @@
     <Compile Include="userControl\purchaseOrderUc.Designer.cs">
       <DependentUpon>purchaseOrderUc.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="forgotpasswordFormTwo.resx">
+    <EmbeddedResource Include="Forms\forgotpasswordFormTwo.resx">
       <DependentUpon>forgotpasswordFormTwo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\forgotpasswordForm.resx">

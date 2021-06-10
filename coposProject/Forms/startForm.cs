@@ -22,7 +22,22 @@ namespace coposProject
 
         private void startForm_Load(object sender, EventArgs e)
         {
-           
+            con.Open();
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = con;
+            command.CommandText = "Select Count(*) from registration";
+            command.ExecuteNonQuery();
+            int transNum = (int)command.ExecuteScalar();
+            con.Close();
+
+            if (transNum > 0)
+            {
+                /* Open Form that prevents Object Disposed Exception */
+                this.Hide();
+                var a = new login();
+                a.Closed += (s, args) => this.Close();
+                a.Show();
+            }
 
         }
 

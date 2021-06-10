@@ -140,6 +140,39 @@ namespace coposProject
         {
             lgn();
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            /* Open Form that prevents Object Disposed Exception */
+            this.Hide();
+            var forgotpasswordForm = new forgotpasswordForm();
+            forgotpasswordForm.Closed += (s, args) => this.Close();
+            forgotpasswordForm.Show();
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+            /*
+            con.Open();
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = con;
+            command.CommandText = "Select Count(*) from registration";
+            command.ExecuteNonQuery();
+            int transNum = (int)command.ExecuteScalar();
+            con.Close();
+
+            if (transNum.Equals(0) )
+            {
+                
+                var a = new startForm();
+                a.Closed += (s, args) => this.Close();
+                a.Show();
+                this.Close();
+
+            
+            }*/
+
+        }
         
     }
 }

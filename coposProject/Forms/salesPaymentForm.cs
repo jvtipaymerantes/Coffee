@@ -33,7 +33,6 @@ namespace coposProject
         {
 
             textBox4.Text = salesForm.overAll.ToString();
-            textBox5.Text = salesForm.hereForm.labelText.ToString();
 
             con.Open();
             OleDbCommand command = new OleDbCommand();
@@ -105,7 +104,7 @@ namespace coposProject
 
         public void addItems()
         {
-            
+            string itemQty = null;
             //Add Items to database
             con.Open();
             OleDbCommand command = new OleDbCommand();
@@ -116,7 +115,23 @@ namespace coposProject
                 command.CommandText = " INSERT INTO tblPurchaseReceipt(referenceNo, productCode, productName, productDescription, productCostPerItem, productQty, type) values('" + textBox1.Text + "', '" + uc.code.ToString() + "', '" + uc.name.ToString() + "', '" + uc.des.ToString() + "', '" + uc.sPrice.ToString() + "', '" + uc.qtyy.ToString() + "', 'Sales') ";
                 command.ExecuteNonQuery();
 
-                MessageBox.Show("Data Saved! ");
+                OleDbCommand cmd = con.CreateCommand();
+                cmd.Connection = con;
+                string query = "select * from tblStocks where productCode = '" + uc.code + "'  ";
+                cmd.CommandText = query;
+                OleDbDataReader myReader = cmd.ExecuteReader();
+
+                while (myReader.Read())
+                {
+                    itemQty = myReader["productQty"].ToString();
+                }
+
+                int quantity = int.Parse(itemQty);
+                quantity -= int.Parse(uc.qtyy);
+
+                command.CommandText = " UPDATE tblStocks SET [productQty]='" + quantity.ToString() + "' WHERE productCode =  '" + uc.code.ToString() + "' ";
+                command.ExecuteNonQuery();
+                
             }
 
             command.CommandText = " INSERT INTO tblPurchaseTransaction(referenceID, employee, total, tax, cashAmount, change, purchaseDate, type) values('" + textBox1.Text + "', '" + textBox5.Text + "', '" + textBox4.Text + "', '" + textBox3.Text + "', '" + textBox2.Text + "', '" + textBox6.Text + "', '" + DateTime.Now.ToString("MM" + "/" + "dd" + "/" + "yyyy" + "PO") + "', 'Sales') ";

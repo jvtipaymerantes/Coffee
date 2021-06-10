@@ -105,6 +105,38 @@ namespace coposProject
             con.Close();
         }
 
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            /* Open Form that prevents Object Disposed Exception */
+            this.Hide();
+            var a = new statisticsForm();
+            a.Closed += (s, args) => this.Close();
+            a.Show();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            /* Open Form that prevents Object Disposed Exception */
+            this.Hide();
+            var a = new orderHistoryForm();
+            a.Closed += (s, args) => this.Close();
+            a.Show();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            /* Open Form that prevents Object Disposed Exception */
+            this.Hide();
+            var a = new purchaseForm();
+            a.Closed += (s, args) => this.Close();
+            a.Show();
+        }
+
         
 
     }
