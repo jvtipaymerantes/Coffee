@@ -248,11 +248,10 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(72)))), ((int)(((byte)(50)))));
             this.label3.Location = new System.Drawing.Point(517, 217);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(325, 56);
+            this.label3.Size = new System.Drawing.Size(248, 56);
             this.label3.TabIndex = 35;
-            this.label3.Text = "Lorem Ipsum lorem ipsum lorem ipsum lorem ipsum lorem \r\nipsum lorem ipsum lorem i" +
-                "psum lorem ipsum lorem ipsum\r\nlorem ipsum lorem ipsum lorem ipsum lorem ipsum lo" +
-                "rem\r\nipsum lorem ipsum";
+            this.label3.Text = "Welcome to the Coffee Point of Sale System,\r\nYour user-friendly point of sale sys" +
+    "tem,\r\nthat will become your business partner \r\nfor your coffee business.\r\n";
             // 
             // startForm
             // 

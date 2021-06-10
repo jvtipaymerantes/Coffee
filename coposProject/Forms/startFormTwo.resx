@@ -24456,4 +24456,27 @@
         YV/MK/mFfzCv5hX8wr+YV/MK/mFfzCv5hX8wr+JRuV6WPielDQBOLivFbv8A+/8A/wD+gI//2Q==
 </value>
   </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>We officially start our contract, but first you 
+must need to know what are the capabilities of this 
+CoPos.
+
+DASHBOARD: You can see here the current statistics of your 
+net income, and
+you can read the notes leaved by the 
+Administration.
+INVENTORY: A databased of your inventory which you can 
+monitor anytime.
+POINT OF SALE: You can easily find the desire or need item of 
+your customers.
+POINT OF PURCHASE: Your Interface on ordering new product 
+or restocking your inventory.
+ORDER HISTORY: You can see your past
+transactions:
+STATISTICS: Display the current situation of the 
+business.
+ACCOUNTS: You can see the current accounts that 
+can access the CoPos.
+</value>
+  </data>
 </root>
