@@ -29,20 +29,31 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(statisticsForm));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -83,18 +94,10 @@
             this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label14 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel4.SuspendLayout();
@@ -119,9 +122,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
-            this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -136,16 +136,25 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label12
+            // panel13
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Helvetica", 11.25F);
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
-            this.label12.Location = new System.Drawing.Point(45, 19);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(39, 17);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Date";
+            this.panel13.Controls.Add(this.label2);
+            this.panel13.Controls.Add(this.label12);
+            this.panel13.Controls.Add(this.label15);
+            this.panel13.Controls.Add(this.label17);
+            this.panel13.Controls.Add(this.label18);
+            this.panel13.Controls.Add(this.label31);
+            this.panel13.Controls.Add(this.label33);
+            this.panel13.Controls.Add(this.label34);
+            this.panel13.Controls.Add(this.label35);
+            this.panel13.Controls.Add(this.label36);
+            this.panel13.Controls.Add(this.pictureBox15);
+            this.panel13.Controls.Add(this.pictureBox21);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel13.Location = new System.Drawing.Point(1034, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(334, 65);
+            this.panel13.TabIndex = 12;
             // 
             // label2
             // 
@@ -157,6 +166,126 @@
             this.label2.Size = new System.Drawing.Size(34, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "Date";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Helvetica", 11.25F);
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
+            this.label12.Location = new System.Drawing.Point(45, 19);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(39, 17);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "Date";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
+            this.label15.Location = new System.Drawing.Point(138, 35);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(34, 15);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "Date";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Helvetica", 11.25F);
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
+            this.label17.Location = new System.Drawing.Point(45, 19);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(39, 17);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "Date";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
+            this.label18.Location = new System.Drawing.Point(137, 33);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(35, 16);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Date";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Helvetica", 11.25F);
+            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
+            this.label31.Location = new System.Drawing.Point(45, 17);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(39, 17);
+            this.label31.TabIndex = 4;
+            this.label31.Text = "Date";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
+            this.label33.Location = new System.Drawing.Point(138, 34);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(34, 15);
+            this.label33.TabIndex = 3;
+            this.label33.Text = "Date";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Helvetica", 11.25F);
+            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
+            this.label34.Location = new System.Drawing.Point(45, 18);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(39, 17);
+            this.label34.TabIndex = 4;
+            this.label34.Text = "Date";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
+            this.label35.Location = new System.Drawing.Point(138, 35);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(34, 15);
+            this.label35.TabIndex = 3;
+            this.label35.Text = "Date";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
+            this.label36.Location = new System.Drawing.Point(45, 18);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(39, 17);
+            this.label36.TabIndex = 4;
+            this.label36.Text = "Date";
+            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
+            this.pictureBox15.Location = new System.Drawing.Point(275, 17);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(32, 35);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox15.TabIndex = 0;
+            this.pictureBox15.TabStop = false;
+            // 
+            // pictureBox21
+            // 
+            this.pictureBox21.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox21.Image")));
+            this.pictureBox21.Location = new System.Drawing.Point(208, 17);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(41, 35);
+            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox21.TabIndex = 2;
+            this.pictureBox21.TabStop = false;
             // 
             // panel6
             // 
@@ -213,7 +342,7 @@
             this.panel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
             this.panel4.Location = new System.Drawing.Point(0, 71);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(163, 617);
+            this.panel4.Size = new System.Drawing.Size(163, 631);
             this.panel4.TabIndex = 2;
             // 
             // panel10
@@ -502,55 +631,56 @@
             // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.label13);
             this.panel11.Controls.Add(this.flowLayoutPanel1);
             this.panel11.Controls.Add(this.label16);
-            this.panel11.Controls.Add(this.label13);
             this.panel11.Controls.Add(this.chart2);
             this.panel11.Controls.Add(this.chart4);
             this.panel11.Controls.Add(this.label14);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(163, 71);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1205, 617);
+            this.panel11.Size = new System.Drawing.Size(1205, 631);
             this.panel11.TabIndex = 3;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Controls.Add(this.chart1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(23, 31);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(25, 37);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(227, 136);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1171, 344);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "sample";
-            this.chart1.Legends.Add(legend1);
+            chartArea9.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea9);
+            legend9.Name = "sample";
+            this.chart1.Legends.Add(legend9);
             this.chart1.Location = new System.Drawing.Point(2, 2);
-            this.chart1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
-            series1.Legend = "sample";
-            series1.MarkerBorderWidth = 10;
-            series1.Name = "Net Income";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(724, 216);
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
+            series9.Legend = "sample";
+            series9.MarkerBorderWidth = 10;
+            series9.Name = "Net Income";
+            this.chart1.Series.Add(series9);
+            this.chart1.Size = new System.Drawing.Size(1167, 324);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart";
-            title1.Name = "sample";
-            this.chart1.Titles.Add(title1);
+            title3.Name = "sample";
+            this.chart1.Titles.Add(title3);
             // 
             // label16
             // 
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label16.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(223, 390);
+            this.label16.Location = new System.Drawing.Point(22, 384);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(150, 32);
@@ -561,8 +691,10 @@
             // label13
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(267, 5);
+            this.label13.Location = new System.Drawing.Point(29, 39);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(150, 32);
@@ -572,37 +704,37 @@
             // 
             // chart2
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            legend2.Name = "Purchases";
-            this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(533, 419);
-            this.chart2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            chartArea7.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea7);
+            legend7.Name = "Purchases";
+            this.chart2.Legends.Add(legend7);
+            this.chart2.Location = new System.Drawing.Point(690, 425);
+            this.chart2.Margin = new System.Windows.Forms.Padding(2);
             this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series2.Legend = "Purchases";
-            series2.MarkerBorderWidth = 10;
-            series2.Name = "Stocks";
-            this.chart2.Series.Add(series2);
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series7.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series7.Legend = "Purchases";
+            series7.MarkerBorderWidth = 10;
+            series7.Name = "Stocks";
+            this.chart2.Series.Add(series7);
             this.chart2.Size = new System.Drawing.Size(469, 194);
             this.chart2.TabIndex = 2;
             this.chart2.Text = "chart";
             // 
             // chart4
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart4.Legends.Add(legend3);
-            this.chart4.Location = new System.Drawing.Point(51, 419);
+            chartArea8.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.chart4.Legends.Add(legend8);
+            this.chart4.Location = new System.Drawing.Point(58, 425);
             this.chart4.Name = "chart4";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.Legend = "Legend1";
-            series3.Name = "stats";
-            this.chart4.Series.Add(series3);
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series8.Legend = "Legend1";
+            series8.Name = "stats";
+            this.chart4.Series.Add(series8);
             this.chart4.Size = new System.Drawing.Size(431, 194);
             this.chart4.TabIndex = 8;
             this.chart4.Text = "chart4";
@@ -610,8 +742,9 @@
             // label14
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label14.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(722, 399);
+            this.label14.Location = new System.Drawing.Point(687, 386);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(150, 32);
@@ -624,141 +757,12 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.label2);
-            this.panel13.Controls.Add(this.label12);
-            this.panel13.Controls.Add(this.label15);
-            this.panel13.Controls.Add(this.label17);
-            this.panel13.Controls.Add(this.label18);
-            this.panel13.Controls.Add(this.label31);
-            this.panel13.Controls.Add(this.label33);
-            this.panel13.Controls.Add(this.label34);
-            this.panel13.Controls.Add(this.label35);
-            this.panel13.Controls.Add(this.label36);
-            this.panel13.Controls.Add(this.pictureBox15);
-            this.panel13.Controls.Add(this.pictureBox21);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel13.Location = new System.Drawing.Point(1034, 0);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(334, 65);
-            this.panel13.TabIndex = 12;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
-            this.label15.Location = new System.Drawing.Point(138, 35);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(34, 15);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "Date";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Helvetica", 11.25F);
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
-            this.label17.Location = new System.Drawing.Point(45, 19);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(39, 17);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "Date";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
-            this.label18.Location = new System.Drawing.Point(137, 33);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(35, 16);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "Date";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Helvetica", 11.25F);
-            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
-            this.label31.Location = new System.Drawing.Point(45, 17);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(39, 17);
-            this.label31.TabIndex = 4;
-            this.label31.Text = "Date";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
-            this.label33.Location = new System.Drawing.Point(138, 34);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(34, 15);
-            this.label33.TabIndex = 3;
-            this.label33.Text = "Date";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Helvetica", 11.25F);
-            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
-            this.label34.Location = new System.Drawing.Point(45, 18);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(39, 17);
-            this.label34.TabIndex = 4;
-            this.label34.Text = "Date";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
-            this.label35.Location = new System.Drawing.Point(138, 35);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(34, 15);
-            this.label35.TabIndex = 3;
-            this.label35.Text = "Date";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(143)))));
-            this.label36.Location = new System.Drawing.Point(45, 18);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(39, 17);
-            this.label36.TabIndex = 4;
-            this.label36.Text = "Date";
-            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(275, 17);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(32, 35);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox15.TabIndex = 0;
-            this.pictureBox15.TabStop = false;
-            // 
-            // pictureBox21
-            // 
-            this.pictureBox21.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox21.Image")));
-            this.pictureBox21.Location = new System.Drawing.Point(208, 17);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(41, 35);
-            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox21.TabIndex = 2;
-            this.pictureBox21.TabStop = false;
-            // 
             // statisticsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(1368, 688);
+            this.ClientSize = new System.Drawing.Size(1368, 702);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -771,6 +775,10 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.statisticsForm_Load);
             this.panel1.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -804,10 +812,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             this.ResumeLayout(false);
 
         }

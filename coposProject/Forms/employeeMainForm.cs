@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace coposProject
 {
-    public partial class mainForm : Form
+    public partial class employeeMainForm : Form
     {
      private OleDbConnection con = new OleDbConnection();
-        public mainForm()
+        public employeeMainForm()
         {
             InitializeComponent();
             con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=coposDb.accdb";
@@ -105,7 +105,7 @@ namespace coposProject
 
         }
 
-        private void mainForm_Load(object sender, EventArgs e)
+        private void employeeMainForm_Load(object sender, EventArgs e)
         {
             try
             {

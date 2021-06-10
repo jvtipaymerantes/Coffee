@@ -173,6 +173,15 @@ namespace coposProject
             }*/
 
         }
+
+        private void rectangleShape7_Click(object sender, EventArgs e)
+        {
+            /* Open Form that prevents Object Disposed Exception */
+            this.Hide();
+            var a = new salesFormEmployee();
+            a.Closed += (s, args) => this.Close();
+            a.Show();
+        }
         
     }
 }

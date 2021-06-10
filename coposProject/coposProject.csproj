@@ -133,6 +133,18 @@
     <Compile Include="Forms\historyForm.Designer.cs">
       <DependentUpon>historyForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\inventoryFormEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\inventoryFormEmployee.designer.cs">
+      <DependentUpon>inventoryFormEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\orderHistoryFormEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\orderHistoryFormEmployee.designer.cs">
+      <DependentUpon>orderHistoryFormEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\purchaseForm.cs">
@@ -182,6 +194,42 @@
     </Compile>
     <Compile Include="Forms\startFormThree.designer.cs">
       <DependentUpon>startFormThree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\salesFormEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\salesFormEmployee.designer.cs">
+      <DependentUpon>salesFormEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="salesPaymentFormEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="salesPaymentFormEmployee.designer.cs">
+      <DependentUpon>salesPaymentFormEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucInventoryEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucInventoryEmployee.designer.cs">
+      <DependentUpon>ucInventoryEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ucSalesEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\ucSalesEmployee.designer.cs">
+      <DependentUpon>ucSalesEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ucSalesReceiptEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\ucSalesReceiptEmployee.designer.cs">
+      <DependentUpon>ucSalesReceiptEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ucNotes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\ucNotes.Designer.cs">
+      <DependentUpon>ucNotes.cs</DependentUpon>
     </Compile>
     <Compile Include="userControl\ucAcc.cs">
       <SubType>UserControl</SubType>
@@ -252,6 +300,12 @@
     <EmbeddedResource Include="Forms\historyForm.resx">
       <DependentUpon>historyForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\inventoryFormEmployee.resx">
+      <DependentUpon>inventoryFormEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\orderHistoryFormEmployee.resx">
+      <DependentUpon>orderHistoryFormEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -285,6 +339,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\startFormThree.resx">
       <DependentUpon>startFormThree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\salesFormEmployee.resx">
+      <DependentUpon>salesFormEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="salesPaymentFormEmployee.resx">
+      <DependentUpon>salesPaymentFormEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucInventoryEmployee.resx">
+      <DependentUpon>ucInventoryEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucSalesEmployee.resx">
+      <DependentUpon>ucSalesEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucSalesReceiptEmployee.resx">
+      <DependentUpon>ucSalesReceiptEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucNotes.resx">
+      <DependentUpon>ucNotes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userControl\ucAcc.resx">
       <DependentUpon>ucAcc.cs</DependentUpon>

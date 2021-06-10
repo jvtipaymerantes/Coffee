@@ -1,6 +1,6 @@
 ﻿namespace coposProject
 {
-    partial class ucSalesReceipt
+    partial class ucSalesReceiptEmployee
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucSalesReceipt));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucSalesReceiptEmployee));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -132,7 +132,7 @@
             this.textBox5.Text = "NAME";
             this.textBox5.Visible = false;
             // 
-            // ucSalesReceipt
+            // ucSalesReceiptEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -145,9 +145,9 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Name = "ucSalesReceipt";
+            this.Name = "ucSalesReceiptEmployee";
             this.Size = new System.Drawing.Size(329, 34);
-            this.Load += new System.EventHandler(this.ucSalesReceipt_Load);
+            this.Load += new System.EventHandler(this.ucSalesReceiptEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

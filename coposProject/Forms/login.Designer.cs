@@ -408,6 +408,7 @@
             this.rectangleShape7.Name = "rectangleShape6";
             this.rectangleShape7.SelectionColor = System.Drawing.Color.Transparent;
             this.rectangleShape7.Size = new System.Drawing.Size(311, 39);
+            this.rectangleShape7.Click += new System.EventHandler(this.rectangleShape7_Click);
             // 
             // pictureBox5
             // 

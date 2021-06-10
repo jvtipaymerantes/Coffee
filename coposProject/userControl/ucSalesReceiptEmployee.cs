@@ -10,7 +10,7 @@ using System.Data.OleDb;
 
 namespace coposProject
 {
-    public partial class ucSalesReceipt : UserControl
+    public partial class ucSalesReceiptEmployee : UserControl
     {
 
         private OleDbConnection con = new OleDbConnection();
@@ -25,21 +25,21 @@ namespace coposProject
         public static string productCostPerItem;
         public static string productQty;
 
-        public static ucSalesReceipt a = null;
+        public static ucSalesReceiptEmployee a = null;
 
-        public ucSalesReceipt()
+        public ucSalesReceiptEmployee()
         {
             InitializeComponent();
             con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=coposDb.accdb";
         }
 
-        private void ucSalesReceipt_Load(object sender, EventArgs e)
+        private void ucSalesReceiptEmployee_Load(object sender, EventArgs e)
         {
 
             a = this;
             qty = 1;
 
-            label3.Text = ucSales.productCodeSales;
+            label3.Text = ucSalesEmployee.productCodeSales;
 
             con.Open();
 
@@ -58,8 +58,8 @@ namespace coposProject
                 textBox5.Text = myReader["productDescription"].ToString();
             }
 
-            origCost = int.Parse(textBox2.Text);
-            itemPerCost = int.Parse(textBox2.Text);
+            origCost = float.Parse(textBox2.Text);
+            itemPerCost = float.Parse(textBox2.Text);
 
             con.Close();
         }

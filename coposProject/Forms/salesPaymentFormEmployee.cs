@@ -12,13 +12,13 @@ using System.IO;
 
 namespace coposProject
 {
-    public partial class salesPaymentForm : Form
+    public partial class salesPaymentFormEmployee : Form
     {
         public static float change;
         private OleDbConnection con = new OleDbConnection();
 
         
-        public salesPaymentForm()
+        public salesPaymentFormEmployee()
         {
             InitializeComponent();
             con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=coposDb.accdb";
@@ -29,7 +29,7 @@ namespace coposProject
             this.Close();
         }
 
-        private void salesPaymentForm_Load(object sender, EventArgs e)
+        private void salesPaymentFormEmployee_Load(object sender, EventArgs e)
         {
 
             textBox4.Text = salesForm.overAll.ToString();
@@ -142,7 +142,7 @@ namespace coposProject
             //shadowBg.currentShadow.Close();
 
             salesForm.hereForm.flowLayoutPanel2.Controls.Clear();
-            salesForm.overAll = 0;
+             
 
             MessageBox.Show("Data Saved! ");
 
