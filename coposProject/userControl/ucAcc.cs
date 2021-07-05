@@ -24,5 +24,10 @@ namespace coposProject
             textBox4.Text = accounts.empUser;
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Parent.Controls.Remove(this);
+        }
+
     }
 }

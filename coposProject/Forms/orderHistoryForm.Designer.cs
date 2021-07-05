@@ -609,7 +609,7 @@
             this.panel10.Controls.Add(this.label13);
             this.panel10.Controls.Add(this.label12);
             this.panel10.Controls.Add(this.label11);
-            this.panel10.Location = new System.Drawing.Point(36, 45);
+            this.panel10.Location = new System.Drawing.Point(36, 76);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(1149, 30);
             this.panel10.TabIndex = 1;
@@ -619,7 +619,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(1073, 9);
+            this.label14.Location = new System.Drawing.Point(1063, 9);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(45, 16);
             this.label14.TabIndex = 3;
@@ -630,7 +630,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(695, 9);
+            this.label13.Location = new System.Drawing.Point(679, 9);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(53, 16);
             this.label13.TabIndex = 2;
@@ -641,7 +641,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(381, 9);
+            this.label12.Location = new System.Drawing.Point(347, 9);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(83, 16);
             this.label12.TabIndex = 1;
@@ -652,7 +652,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(41, 9);
+            this.label11.Location = new System.Drawing.Point(18, 9);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(109, 16);
             this.label11.TabIndex = 0;
@@ -663,10 +663,10 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(36, 81);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(36, 130);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(16, 10, 10, 10);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1149, 549);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1149, 500);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // shapeContainer2
@@ -686,9 +686,9 @@
             this.rectangleShape1.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.rectangleShape1.BorderColor = System.Drawing.Color.White;
             this.rectangleShape1.CornerRadius = 7;
-            this.rectangleShape1.Location = new System.Drawing.Point(29, 36);
+            this.rectangleShape1.Location = new System.Drawing.Point(29, 63);
             this.rectangleShape1.Name = "rectangleShape1";
-            this.rectangleShape1.Size = new System.Drawing.Size(1162, 599);
+            this.rectangleShape1.Size = new System.Drawing.Size(1162, 572);
             // 
             // timer1
             // 

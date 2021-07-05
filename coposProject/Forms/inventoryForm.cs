@@ -18,6 +18,7 @@ namespace coposProject
         public static string prCode;
         public static string prName;
         public static string prType;
+        public static string prQty;
 
         public inventoryForm()
         {
@@ -97,7 +98,7 @@ namespace coposProject
                 prCode = myReader["productCode"].ToString();
                 prName = myReader["productName"].ToString();
                 prType = myReader["productType"].ToString();
-
+                prQty = myReader["productQty"].ToString();
                 ucInventory uc = new ucInventory();
                 flowLayoutPanel1.Controls.Add(uc);
             }

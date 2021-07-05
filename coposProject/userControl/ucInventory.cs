@@ -22,6 +22,7 @@ namespace coposProject
             textBox1.Text = inventoryForm.prCode;
             textBox2.Text = inventoryForm.prName;
             textBox3.Text = inventoryForm.prType;
+            textBox4.Text = inventoryForm.prQty;
         }
     }
 }
