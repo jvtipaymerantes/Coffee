@@ -56,6 +56,7 @@
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,6 +67,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\forgotpasswordFormTwo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\forgotpasswordFormTwo.designer.cs">
+      <DependentUpon>forgotpasswordFormTwo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\forgotpasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\forgotpasswordForm.designer.cs">
+      <DependentUpon>forgotpasswordForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\accounts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +127,24 @@
     <Compile Include="Forms\statisticsForm.designer.cs">
       <DependentUpon>statisticsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\historyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\historyForm.Designer.cs">
+      <DependentUpon>historyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\inventoryFormEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\inventoryFormEmployee.designer.cs">
+      <DependentUpon>inventoryFormEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\orderHistoryFormEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\orderHistoryFormEmployee.designer.cs">
+      <DependentUpon>orderHistoryFormEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\purchaseForm.cs">
@@ -134,12 +165,114 @@
     <Compile Include="Forms\purchasePaymentForm.Designer.cs">
       <DependentUpon>purchasePaymentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\shadowBg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\shadowBg.Designer.cs">
+      <DependentUpon>shadowBg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\salesPaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\salesPaymentForm.designer.cs">
+      <DependentUpon>salesPaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\startForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\startForm.designer.cs">
+      <DependentUpon>startForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\startFormTwo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\startFormTwo.designer.cs">
+      <DependentUpon>startFormTwo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\startFormThree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\startFormThree.designer.cs">
+      <DependentUpon>startFormThree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\salesFormEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\salesFormEmployee.designer.cs">
+      <DependentUpon>salesFormEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="salesPaymentFormEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="salesPaymentFormEmployee.designer.cs">
+      <DependentUpon>salesPaymentFormEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucInventoryEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucInventoryEmployee.designer.cs">
+      <DependentUpon>ucInventoryEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ucSalesEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\ucSalesEmployee.designer.cs">
+      <DependentUpon>ucSalesEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ucSalesReceiptEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\ucSalesReceiptEmployee.designer.cs">
+      <DependentUpon>ucSalesReceiptEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ucNotes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\ucNotes.Designer.cs">
+      <DependentUpon>ucNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ucAcc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\ucAcc.Designer.cs">
+      <DependentUpon>ucAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ucSales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\ucSales.Designer.cs">
+      <DependentUpon>ucSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ucSalesReceipt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\ucSalesReceipt.Designer.cs">
+      <DependentUpon>ucSalesReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ucReceiptPo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\ucReceiptPo.Designer.cs">
+      <DependentUpon>ucReceiptPo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\ucInventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\ucInventory.Designer.cs">
+      <DependentUpon>ucInventory.cs</DependentUpon>
+    </Compile>
     <Compile Include="userControl\purchaseOrderUc.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="userControl\purchaseOrderUc.Designer.cs">
       <DependentUpon>purchaseOrderUc.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\forgotpasswordFormTwo.resx">
+      <DependentUpon>forgotpasswordFormTwo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\forgotpasswordForm.resx">
+      <DependentUpon>forgotpasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\accounts.resx">
       <DependentUpon>accounts.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +297,15 @@
     <EmbeddedResource Include="Forms\statisticsForm.resx">
       <DependentUpon>statisticsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\historyForm.resx">
+      <DependentUpon>historyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\inventoryFormEmployee.resx">
+      <DependentUpon>inventoryFormEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\orderHistoryFormEmployee.resx">
+      <DependentUpon>orderHistoryFormEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -182,6 +324,54 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\purchasePaymentForm.resx">
       <DependentUpon>purchasePaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\shadowBg.resx">
+      <DependentUpon>shadowBg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\salesPaymentForm.resx">
+      <DependentUpon>salesPaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\startForm.resx">
+      <DependentUpon>startForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\startFormTwo.resx">
+      <DependentUpon>startFormTwo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\startFormThree.resx">
+      <DependentUpon>startFormThree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\salesFormEmployee.resx">
+      <DependentUpon>salesFormEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="salesPaymentFormEmployee.resx">
+      <DependentUpon>salesPaymentFormEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucInventoryEmployee.resx">
+      <DependentUpon>ucInventoryEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucSalesEmployee.resx">
+      <DependentUpon>ucSalesEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucSalesReceiptEmployee.resx">
+      <DependentUpon>ucSalesReceiptEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucNotes.resx">
+      <DependentUpon>ucNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucAcc.resx">
+      <DependentUpon>ucAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucSales.resx">
+      <DependentUpon>ucSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucSalesReceipt.resx">
+      <DependentUpon>ucSalesReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucReceiptPo.resx">
+      <DependentUpon>ucReceiptPo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucInventory.resx">
+      <DependentUpon>ucInventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userControl\purchaseOrderUc.resx">
       <DependentUpon>purchaseOrderUc.cs</DependentUpon>

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.IO;
 
 namespace coposProject
 {
@@ -18,14 +19,18 @@ namespace coposProject
         public static string productType;
         public static string productUnit;
         public static string productQuantity;
+        public static string productSellingPrice;
         public static string productCostperItem;
         public static string productExpDate;
         public static float productTotal;
         public static float overallTotal = 0;
 
-        public static purchaseForm currentForm = null;
+        public static string imagelocation = null;
 
+        public static purchaseForm currentForm = null;
+        
         private OleDbConnection con = new OleDbConnection();
+
         public purchaseForm()
         {
             InitializeComponent();
@@ -34,7 +39,7 @@ namespace coposProject
 
         private void purchaseForm_Load(object sender, EventArgs e)
         {
-            textBox7.Text = overallTotal.ToString();
+            
         }
 
         private void rectangleShape2_Click(object sender, EventArgs e)
@@ -217,6 +222,7 @@ namespace coposProject
             productUnit = unit.ToString();
 
             productQuantity = textBox4.Text;
+            productSellingPrice = textBox8.Text;
             productCostperItem = textBox5.Text;
 
             StringBuilder expDate = new StringBuilder();
@@ -228,32 +234,43 @@ namespace coposProject
             productTotal = float.Parse(productQuantity) * float.Parse(productCostperItem);
             
             overallTotal = overallTotal + productTotal;
-            textBox7.Text = overallTotal.ToString();
 
             userControl.purchaseOrderUc uc = new userControl.purchaseOrderUc();
             flowLayoutPanel1.Controls.Add(uc);
 
             clearPurchaseForm();
 
+            StringBuilder sbTotal = new StringBuilder();
+            sbTotal.Append("(");
+            sbTotal.Append(overallTotal.ToString());
+            sbTotal.Append(")");
+            label30.Text = sbTotal.ToString();
+
         }
 
         private void pictureBox19_Click(object sender, EventArgs e)
         {
 
-            String imagelocation = "";
             try {
                 
                 OpenFileDialog dialog = new OpenFileDialog();
                 dialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All Files(*.*)|*.*";
                 if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK){
+
                     imagelocation = dialog.FileName;
+                    pictureBox19.Tag = imagelocation;
                     pictureBox19.ImageLocation = imagelocation;
+
                     panel32.Visible = false;
+                    rectangleShape27.Visible = false;
+                    pictureBox19.BackColor = Color.FromArgb(247, 207, 143);
                 }
 
             } catch(Exception){
                 MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+
+            insertData();
 
         }
 
@@ -263,6 +280,8 @@ namespace coposProject
             pictureBox17.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
             label18.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
             panel32.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
+            rectangleShape27.BackColor = System.Drawing.Color.FromArgb(240, 240, 240);
+            rectangleShape27.BorderColor = System.Drawing.Color.FromArgb(240, 240, 240);
         }
 
         private void pictureBox19_MouseLeave(object sender, EventArgs e)
@@ -271,10 +290,18 @@ namespace coposProject
             pictureBox17.BackColor = Color.White;
             label18.BackColor = Color.White;
             panel32.BackColor = Color.White;
+            rectangleShape27.BackColor = Color.White;
+            rectangleShape27.BorderColor = Color.White;
         }
 
         public void clearPurchaseForm()
         {
+
+            pictureBox19.Image = null;
+            pictureBox19.BackColor = Color.White;
+            panel32.Visible = true;
+            rectangleShape27.Visible = true;
+
             textBox1.Clear();
             textBox6.Clear();
             textBox2.Clear();
@@ -282,6 +309,7 @@ namespace coposProject
             comboBox1.Text = "UNIT";
             textBox4.Clear();
             textBox5.Clear();
+            textBox8.Clear();
             comboBox2.Text = "MONTH";
             comboBox3.Text = "DAY";
             comboBox4.Text = "YEAR";
@@ -293,6 +321,10 @@ namespace coposProject
             rectangleShape10.Visible = false;
             rectangleShape12.Visible = false;
             rectangleShape25.Visible = false;
+
+            label16.Visible = false;
+            pictureBox16.Visible = false;
+            rectangleShape23.Visible = false;
 
         }
 
@@ -306,37 +338,176 @@ namespace coposProject
         private void label30_Click(object sender, EventArgs e)
         {
             currentForm = this;
+
             purchasePaymentForm a = new purchasePaymentForm();
             a.Show();
-        }
+            a.TopMost = true;
 
-        public string LabelText
-        {
-            get
-            {
-                return this.label1.Text;
-            }
-            set
-            {
-                this.label1.Text = value;
-            }
+            shadowBg bg = new shadowBg();
+            bg.Show();
+
+
         }
 
         public void insertData(){
-
-            foreach (userControl.purchaseOrderUc uc in flowLayoutPanel1.Controls)
+            //Validation ( ALL Picture Box / Text Box Must Have Value
+            if (!(textBox6.Text.Equals("")) && !(textBox1.Text.Equals("")) && !(textBox2.Text.Equals("")) && !(textBox3.Text.Equals("")) && !(comboBox1.Text.Equals("UNIT")) && !(textBox5.Text.Equals("")) && !(comboBox2.Text.Equals("MONTH")) && !(comboBox3.Text.Equals("DAY")) && !(comboBox4.Text.Equals("YEAR")) && !(textBox4.Text.Equals("")) && !(pictureBox19.ImageLocation == null) )
             {
-                MessageBox.Show(uc.TextBox1Value + " " + uc.TextBox2Value + " " + uc.TextBox3Value + " " + uc.TextBox4Value + " " + uc.TextBox5Value + " " + uc.TextBox6Value + " " + uc.TextBox7Value);
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = con;
-                command.CommandText = " INSERT INTO tblPurchaseReceipt(referenceNo, productCode, productName, productDescription, productCostPerItem, productQty, total, cashAmount, change) values('" + textBox1.Text + "', '" + uc.TextBox1Value.ToString() + "', '" + uc.TextBox2Value.ToString() + "', '" + uc.TextBox3Value.ToString() + "', '" + uc.TextBox6Value.ToString() + "', '" + uc.TextBox8Value.ToString() + "', '" + textBox4.Text + "', '" + textBox2.Text + "', '" + textBox6.Text + "') ";
-                command.ExecuteNonQuery();
-
+                label16.Visible = true;
+                pictureBox16.Visible = true;
+                rectangleShape23.Visible = true;
             }
+        }
 
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+            insertData();
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            insertData();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            insertData();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            insertData();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            insertData();
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            insertData();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            insertData();
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            insertData();
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            insertData();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            insertData();
+        }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
             
         }
 
+        private void rectangleShape23_Click(object sender, EventArgs e)
+        {
+            
+        }
 
-    }
-}
+        private void pictureBox20_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var a = new login();
+            a.Closed += (s, args) => this.Close();
+            a.Show();   
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && !char.IsPunctuation(e.KeyChar) && (e.KeyChar != (char)Keys.Back) )
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label2.Text = DateTime.Now.ToLongTimeString();
+            label31.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void flowLayoutPanel1_ControlRemoved(object sender, ControlEventArgs e)
+        {
+            if (overallTotal == 0)
+            {
+                label30.Text = "00.00";
+            }
+            else
+            {
+                StringBuilder sbTotal = new StringBuilder();
+                sbTotal.Append("(");
+                sbTotal.Append(overallTotal.ToString());
+                sbTotal.Append(")");
+                label30.Text = sbTotal.ToString();
+            }
+        }
+
+        private void rectangleShape26_Click(object sender, EventArgs e)
+        {
+            currentForm = this;
+
+            purchasePaymentForm a = new purchasePaymentForm();
+            a.Show();
+            a.TopMost = true;
+
+            shadowBg bg = new shadowBg();
+            bg.Show();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            currentForm = this;
+
+            purchasePaymentForm a = new purchasePaymentForm();
+            a.Show();
+            a.TopMost = true;
+
+            shadowBg bg = new shadowBg();
+            bg.Show();
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+
+
+    }// End of Class
+}// End of Namespace
