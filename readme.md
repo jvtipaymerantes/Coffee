@@ -1,1 +1,3 @@
-# COFFEE BUSINESS POINT OF SALE AND PURCHASE INVENTORY MANAGEMENT SYSTEM USING C# .net and Ms Acess Database
+# Coffee Business Point of Sale and Purchase Inventory Management System
+
+CoPOS is a simple system where it can provide easier capturing of data sales and inventory of a shop with data security which records the transaction of a certain user. The objective of CoPOS is to store large number of sales and inventory in long term purposes with data security that captures each transaction made by the user. User can do transaction for each customer in a few click that includes transaction recording.
