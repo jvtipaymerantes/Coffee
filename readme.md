@@ -21,4 +21,11 @@ CoPOS is a simple system where it can provide easier capturing of data sales and
 - Clarence James Orias
 
 ## Screen Shots
-![](main/coposProject/Screenshots/2.PNG)
+<img src="coposProject/Screenshots/1.PNG" width="960">
+<img src="coposProject/Screenshots/2.PNG" width="960">
+<img src="coposProject/Screenshots/3.PNG" width="960">
+<img src="coposProject/Screenshots/4.PNG" width="960">
+<img src="coposProject/Screenshots/5.PNG" width="960">
+<img src="coposProject/Screenshots/6.PNG" width="960">
+<img src="coposProject/Screenshots/7.PNG" width="960">
+<img src="coposProject/Screenshots/8.PNG" width="960">
