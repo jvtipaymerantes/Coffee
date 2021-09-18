@@ -32,7 +32,7 @@ namespace coposProject
         private void salesPaymentFormEmployee_Load(object sender, EventArgs e)
         {
 
-            textBox4.Text = salesForm.overAll.ToString();
+            textBox4.Text = salesFormEmployee.overAll.ToString();
 
             con.Open();
             OleDbCommand command = new OleDbCommand();
@@ -72,10 +72,10 @@ namespace coposProject
 
         private void label11_Click(object sender, EventArgs e)
         {
-            if (float.Parse(textBox2.Text) > salesForm.overAll)
+            if (float.Parse(textBox2.Text) > salesFormEmployee.overAll)
             {
 
-                change = float.Parse(textBox2.Text) - salesForm.overAll;
+                change = float.Parse(textBox2.Text) - salesFormEmployee.overAll;
                 panel3.Visible = false;
                 panel2.Visible = true;
                 textBox6.Text = change.ToString();
@@ -86,7 +86,7 @@ namespace coposProject
             }
             else
             {
-                change = salesForm.overAll - float.Parse(textBox2.Text);
+                change = salesFormEmployee.overAll - float.Parse(textBox2.Text);
                 textBox7.Text = "Invalid Amount of Cash you are " + change +" less.";
             }
 
@@ -110,7 +110,7 @@ namespace coposProject
             OleDbCommand command = new OleDbCommand();
             command.Connection = con;
 
-            foreach (ucSalesReceipt uc in salesForm.hereForm.flowLayoutPanel2.Controls)
+            foreach (ucSalesReceiptEmployee uc in salesFormEmployee.hereForm.flowLayoutPanel2.Controls)
             {
                 command.CommandText = " INSERT INTO tblPurchaseReceipt(referenceNo, productCode, productName, productDescription, productCostPerItem, productQty, type) values('" + textBox1.Text + "', '" + uc.code.ToString() + "', '" + uc.name.ToString() + "', '" + uc.des.ToString() + "', '" + uc.sPrice.ToString() + "', '" + uc.qtyy.ToString() + "', 'Sales') ";
                 command.ExecuteNonQuery();
@@ -141,7 +141,7 @@ namespace coposProject
             this.Close();
             //shadowBg.currentShadow.Close();
 
-            salesForm.hereForm.flowLayoutPanel2.Controls.Clear();
+            salesFormEmployee.hereForm.flowLayoutPanel2.Controls.Clear();
              
 
             MessageBox.Show("Data Saved! ");
